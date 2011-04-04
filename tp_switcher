@@ -1,0 +1,11 @@
+#!/bin/bash
+touch /tmp/tpstate
+CURRENT_TOUCHPAD_STATE="`cat /tmp/tpstate`"
+
+if [ "$CURRENT_TOUCHPAD_STATE" == "1" ]; then
+    synclient TouchPadOff=0
+    echo '0' > /tmp/tpstate
+else
+    synclient TouchPadOff=1
+    echo '1' > /tmp/tpstate
+fi
