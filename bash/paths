@@ -1,0 +1,3 @@
+PATH="$HOME/dotfiles/bin:$PATH"
+export PATH
+
