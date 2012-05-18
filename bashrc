@@ -2,7 +2,7 @@
 [[ $- != *i* ]] && return
 
 # Load every single file in ./bash
-source $HOME/dotfiles/bash/*
+for f in $HOME/dotfiles/bash/*; do source $f; done
 
 PS1='[\u@\h \W]$(parse_git_branch)\$ '
 # xhost +local: &> /dev/null
