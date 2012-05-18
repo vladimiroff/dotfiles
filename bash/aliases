@@ -1,7 +1,12 @@
+#!/bin/bash
+
 # I don't always run tmux
 # But when I do, I want it in 256 colors and with UTF-8 support
 [ -n "$TMUX" ] && export TERM=screen-256color
 alias tmux='tmux -u -2'
+
+alias t='tmux'
+alias ta='tmux attach'
 
 # virtualenv
 alias vv='source ../env/bin/activate'
@@ -26,3 +31,6 @@ alias runserver_plain='manage runserver 0.0.0.0:8000'
 alias migrate='manage migrate'
 alias genschema='manage schemamigration'
 alias collectstatic='manage collectstatic -l --noinput'
+
+alias ..='cd ..'
+alias o='kde-open'
