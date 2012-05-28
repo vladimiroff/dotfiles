@@ -9,7 +9,8 @@ alias t='tmux'
 alias ta='tmux attach'
 
 # virtualenv
-alias vv='source ../env/bin/activate'
+alias vv='source ./env/bin/activate'
+alias vvv='source ../env/bin/activate'
 
 # ls
 alias ls='ls --color=auto'
