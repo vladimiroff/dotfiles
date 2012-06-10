@@ -1,5 +1,12 @@
 #!/bin/bash
 
+if [[ -n "$TMUX" ]]; then
+    export TERM=screen-256color
+else
+    tmux attach-session -t "main" || tmux new-session -s "main"
+fi
+
+
 # sudo bash-comletion
 complete -cf please
 
