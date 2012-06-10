@@ -3,7 +3,7 @@
 if [[ -n "$TMUX" ]]; then
     export TERM=screen-256color
 else
-    tmux attach-session -t "main" || tmux new-session -s "main"
+    tmux new-session -s "main_`date +%s`"
 fi
 
 
