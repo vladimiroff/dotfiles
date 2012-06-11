@@ -24,6 +24,7 @@ alias please='/usr/bin/sudo'
 
 # Django (django-extensions and ipython required)
 alias manage='python2 manage.py'
+alias tests='manage test'
 alias syncdb='manage syncdb'
 alias dbshell='manage dbshell'
 alias shellplus='manage shell_plus --ipython'
