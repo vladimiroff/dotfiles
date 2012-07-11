@@ -6,7 +6,6 @@ else
     tmux new-session -s "main_`date +%s`"
 fi
 
-
 # sudo bash-comletion
 complete -cf please
 
@@ -16,3 +15,6 @@ export EDITOR=vim
 export HISTCONTROL=ignoreboth
 export KWIN_DIRECT_GL=1
 export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel'
+
+export WORKON_HOME=$HOME/.virtualenvs
+source /usr/bin/virtualenvwrapper.sh
