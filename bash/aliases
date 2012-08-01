@@ -13,7 +13,6 @@ alias l='ls -CF'
 
 # Clever, right?
 alias су='su'
-alias please='/usr/bin/sudo'
 
 # Django (django-extensions and ipython required)
 alias manage='python2 manage.py'
