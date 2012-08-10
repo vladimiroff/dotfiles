@@ -24,7 +24,7 @@ alias runserver='manage runserver_plus 0.0.0.0:8000'
 alias runserver_plain='manage runserver 0.0.0.0:8000'
 alias migrate='manage migrate'
 alias genschema='manage schemamigration'
-alias collectstatic='manage collectstatic -l --noinput'
+alias collectstatic='manage collectstatic --noinput'
 
 alias ..='cd ..'
 alias o='kde-open'
