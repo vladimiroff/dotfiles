@@ -26,5 +26,12 @@ alias migrate='manage migrate'
 alias genschema='manage schemamigration'
 alias collectstatic='manage collectstatic --noinput'
 
+# Heroku
+alias hmanage='heroku run python manage.py'
+alias hcollectstatic='hmanage collectstatic --noinput'
+alias hshellplus='hmanage shell_plus'
+alias hlogs='heroku logs -t'
+alias hdeploy='git hpush && hcollectstatic'
+
 alias ..='cd ..'
 alias o='kde-open'

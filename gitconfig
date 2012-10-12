@@ -30,5 +30,6 @@
     ls = ls-files
     locals = log --branches --not --remotes
     b = branch
+    hpush = push heroku master
 
 # vim: set filetype=.gitconfig:
