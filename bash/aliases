@@ -25,6 +25,7 @@ alias runserver_plain='manage runserver 0.0.0.0:8000'
 alias migrate='manage migrate'
 alias genschema='manage schemamigration'
 alias collectstatic='manage collectstatic --noinput'
+alias celery='manage celery worker --loglevel=info'
 
 alias ..='cd ..'
 alias o='kde-open'
