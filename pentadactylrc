@@ -1,0 +1,89 @@
+set complete=l
+set followhints=1
+set editor='~/dotfiles/bin/konsole-vim +<line> +"sil! call cursor(0, <column>)" <file>'
+
+nmap -builtin e :emenu<space>
+
+" Highlight
+set hintkeys="abcdefghipqrstuwxyz"
+highlight HintElem none;
+highlight Hint font-size: 12px;
+            \ font-weight: bold;
+            \ text-transform: uppercase;
+            \ border: 1px solid black;
+            \ background-color: #FFEF4F;
+            \ padding: 2px;
+            \ border-radius: 3px;
+
+" faster scrolling:
+map -builtin j 5j
+map -builtin k 5k
+map -builtin h 5h
+map -builtin l 5l
+
+map -builtin J 10j
+map -builtin K 10k
+
+" move through tabs:
+map -builtin <C-h> gT
+map -builtin <C-l> gt
+
+" shift toolbar up and down:
+map -builtin <C-j> :set guioptions+=T<cr>
+map -builtin <C-k> :set guioptions-=T<cr>
+
+" firebug:
+map -builtin gn <F12>
+
+" bring back some classic mappings
+cmap -builtin <C-c> <C-v><C-c>
+cmap -builtin <C-v> <C-v><C-v>
+cmap -builtin <C-x> <C-v><C-x>
+cmap -builtin <C-y> <C-v><C-y>
+imap -builtin <C-q> <C-z>
+imap -builtin <C-s> <C-c>
+imap -builtin <C-c> <C-v><C-c>
+imap -builtin <C-v> <C-v><C-v>
+imap -builtin <C-x> <C-v><C-x>
+imap -builtin <C-y> <C-v><C-y>
+map -builtin <C-q> <C-z>
+map -builtin <C-s> <C-c>
+map -builtin <C-c> <C-v><C-c>
+map -builtin <C-v> <C-v><C-v>
+map -builtin <C-x> <C-v><C-x>
+map -builtin <C-t> <C-v><C-t>
+map -builtin <C-u> <C-v><C-u>
+map -builtin <C-f> <C-v><C-f>
+" Mother of GOD!
+
+" External Filetype Aware editing
+imap -builtin <C-i> -javascript editExternallyWithFiletype()
+javascript <<EOF
+function editExternallyWithFiletype() {
+    var save_editor = options["editor"];
+    var filetype = editExternallyFiletype();
+    if (filetype) {
+        options["editor"] += " \"+setf " + filetype + "\"";
+    }
+    editor.editFieldExternally();
+    options["editor"] = save_editor;
+}
+
+function editExternallyFiletype() {
+    var host = buffer.URL.host
+    switch(host.replace(/^www\./, "")) {
+        case "github.com":
+            return "markdown";
+        case "reddit.com":
+            return "markdown";
+        case "stackoverflow.com":
+            return "markdown";
+        case "mail.google.com":
+            return "mail";
+    }
+    if (host.match(/.*\.wikia\.com$/) || host.match(/.*\.wikipedia\.org$/))
+        return "mediawiki";
+}
+EOF
+
+" vim: ft=vim

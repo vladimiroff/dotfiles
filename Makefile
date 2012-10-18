@@ -1,6 +1,6 @@
 SHELL := /bin/bash
 
-install: install-bash install-tmux install-git install-vim install-pip install-ipython
+install: install-bash install-tmux install-git install-vim install-pip install-ipython install-pentadactyl
 
 install-bash:
 	ln -fs `pwd`/bashrc ~/.bashrc
@@ -21,3 +21,6 @@ install-ipython:
 install-pip:
 	mkdir -p ~/.pip
 	ln -fs `pwd`/pip.conf ~/.pip/pip.conf
+
+install-pentadactyl:
+	ln -fs `pwd`/pentadactylrc ~/.pentadactylrc

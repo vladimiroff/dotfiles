@@ -1,3 +1,2 @@
 #!/bin/sh
-# I need this script, because "It's All Text!" needs a solid path
-konsole -e vim "$@"
+konsole --hide-menubar --hide-tabbar --nofork -e vim "$@"
