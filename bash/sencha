@@ -1,0 +1,6 @@
+#!/bin/bash
+
+export PATH=/opt/SenchaSDKTools-2.0.0-beta3:$PATH
+export SENCHA_SDK_TOOLS_2_0_0_BETA3="/home/kiril/sencha"
+export PATH=/home/sencha:$PATH
+export PATH=/home/kiril/sencha:$PATH

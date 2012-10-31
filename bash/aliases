@@ -24,6 +24,7 @@ alias runserver='manage clean_pyc; manage runserver_plus 0.0.0.0:8000'
 alias runserver_plain='manage runserver 0.0.0.0:8000'
 alias migrate='manage migrate'
 alias genschema='manage schemamigration'
+alias datamigration='manage datamigration'
 alias collectstatic='manage collectstatic --noinput'
 alias celery='manage celery worker --loglevel=info'
 
