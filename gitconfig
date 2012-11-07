@@ -25,6 +25,7 @@
 [push]
     default = tracking
 [alias]
+    st = status
     co = checkout
     l = log --graph --decorate --all
     ls = ls-files
