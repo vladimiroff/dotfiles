@@ -25,12 +25,13 @@
 [push]
     default = tracking
 [alias]
-    st = status
-    co = checkout
-    l = log --graph --decorate --all
-    ls = ls-files
-    locals = log --branches --not --remotes
     b = branch
+    co = checkout
     hpush = push heroku master
+    l = log --graph --decorate --all
+    locals = log --branches --not --remotes
+    ls = ls-files
+    st = status
+    tree = log --graph --simplify-by-decoration --pretty=format:'%d' --all
 
 # vim: set filetype=.gitconfig:
