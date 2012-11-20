@@ -1,6 +1,6 @@
 #!/bin/bash
 
-alias tmux='tmux -u -2'
+alias tmux='tmux -u -2 -q'
 
 alias t='tmux'
 alias ta='tmux attach'
@@ -37,3 +37,5 @@ alias hdeploy='git hpush && hcollectstatic'
 
 alias ..='cd ..'
 alias o='kde-open'
+
+alias go-test='autocompile.py . .go go-red-green'

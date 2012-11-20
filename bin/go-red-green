@@ -1,0 +1,13 @@
+#!/bin/sh
+if [ ! -z $1 ] && [ $1 == end ]; then
+    tmux set -g status-bg cyan
+    exit 0
+fi
+
+clear
+go test ./...
+if [ $? == 0 ]; then
+    tmux set -g status-bg green
+else
+    tmux set -g status-bg red
+fi
