@@ -5,7 +5,9 @@ if [ ! -z $1 ] && [ $1 == end ]; then
 fi
 
 clear
+tmux set -g status-bg yellow
 go test ./...
+
 if [ $? == 0 ]; then
     tmux set -g status-bg green
 else
