@@ -1,6 +1,10 @@
 SHELL := /bin/bash
 
-install: install-bash install-tmux install-git install-vim install-pip install-ipython install-pentadactyl install-fonts
+install: install-bash install-tmux install-X install-git install-vim install-pip install-ipython install-pentadactyl install-fonts
+
+install-X:
+	ln -fs `pwd`/Xmodmap ~/.Xmodmap
+	ln -fs `pwd`/xinitrc ~/.xinitrc
 
 install-bash:
 	ln -fs `pwd`/bashrc ~/.bashrc
