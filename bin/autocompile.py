@@ -10,6 +10,7 @@
 # Example:
 #   ./autocompile.py /my-latex-document-dir .tex,.bib "make pdf"
 #
+from __future__ import print_function
 
 import subprocess
 import sys
@@ -26,7 +27,7 @@ class OnWriteHandler(pyinotify.ProcessEvent):
         print('==> Modification detected')
         subprocess.call(self.cmd.split(' '), cwd=self.cwd)
 
-    def process_IN_MODIFY(self, event):
+    def process_IN_CLOSE_WRITE(self, event):
         if all(not event.pathname.endswith(ext) for ext in self.extensions):
             return
         self._run_cmd()
