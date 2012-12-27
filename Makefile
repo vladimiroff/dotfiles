@@ -5,6 +5,7 @@ install: install-bash install-tmux install-X install-git install-vim install-pip
 install-X:
 	ln -fs `pwd`/Xmodmap ~/.Xmodmap
 	ln -fs `pwd`/xinitrc ~/.xinitrc
+	ln -fs `pwd`/Xdefaults ~/.Xdefaults
 
 install-bash:
 	ln -fs `pwd`/bashrc ~/.bashrc
