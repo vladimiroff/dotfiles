@@ -1,5 +1,5 @@
 #!/bin/bash
 
-PATH="$HOME/dotfiles/bin:$PATH"
-export PATH
+export GOPATH=$HOME/.go
+export PATH="$HOME/dotfiles/bin:$GOPATH/bin:$PATH"
 

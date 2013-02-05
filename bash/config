@@ -17,7 +17,6 @@ export EDITOR=vim
 export HISTCONTROL=ignoreboth
 export KWIN_DIRECT_GL=1
 export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel'
-export GOPATH=$HOME/.go
 export MOZ_DISABLE_PANGO=1
 
 export WORKON_HOME=$HOME/.virtualenvs
