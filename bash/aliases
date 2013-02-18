@@ -35,6 +35,9 @@ alias hshellplus='hmanage shell_plus'
 alias hlogs='heroku logs -t'
 alias hdeploy='git hpush && hcollectstatic'
 
+# Rails
+alias be='bundle exec'
+
 alias ..='cd ..'
 alias o='kde-open'
 
