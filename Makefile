@@ -1,5 +1,5 @@
 SHELL := /bin/bash
-ALL   := bash tmux X git vim pip ipython pentadactyl fonts
+ALL   := bash tmux X git vim pip ipython pentadactyl
 
 update:
 	git pull
@@ -35,7 +35,3 @@ install-pip:
 
 install-pentadactyl:
 	ln -fs `pwd`/pentadactylrc ~/.pentadactylrc
-
-install-fonts:
-	[[ -d ~/.fonts ]] || mkdir -p ~/.fonts
-	ln -fs `pwd`/fonts/* ~/.fonts
