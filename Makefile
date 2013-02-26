@@ -1,6 +1,12 @@
 SHELL := /bin/bash
+ALL   := bash tmux X git vim pip ipython pentadactyl fonts
 
-install: install-bash install-tmux install-X install-git install-vim install-pip install-ipython install-pentadactyl install-fonts
+update:
+	git pull
+	$(MAKE) install
+	source ~/.bashrc
+
+install: $(ALL:%=install-%)
 
 install-X:
 	ln -fs `pwd`/Xmodmap ~/.Xmodmap
