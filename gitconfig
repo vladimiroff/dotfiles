@@ -22,6 +22,8 @@
 [difftool]
     cmd = vimdiff $LOCAL $REMOTE
     prompt = false
+[pull]
+    rebase = true
 [push]
     default = tracking
 [alias]
