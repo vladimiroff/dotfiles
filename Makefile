@@ -14,7 +14,8 @@ install-X:
 	ln -fs `pwd`/Xdefaults ~/.Xdefaults
 
 install-bash:
-	ln -fs `pwd`/bashrc ~/.bashrc
+	ln -fs `pwd`/bash/rc ~/.bashrc
+	ln -fs `pwd`/bash/profile ~/.bash_profile
 
 install-tmux:
 	ln -fs `pwd`/tmux.conf ~/.tmux.conf

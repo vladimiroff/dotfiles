@@ -1,3 +1,5 @@
+#!/bin/bash
+
 source $HOME/dotfiles/bash/completion_scripts/django
 source $HOME/dotfiles/bash/completion_scripts/git
 

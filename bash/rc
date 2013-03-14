@@ -1,0 +1,12 @@
+#!/bin/bash
+[[ $- != *i* ]] && return
+
+stty -ixon
+
+source $HOME/dotfiles/bash/paths
+source $HOME/dotfiles/bash/aliases
+source $HOME/dotfiles/bash/config
+source $HOME/dotfiles/bash/functions
+source $HOME/dotfiles/bash/completion
+
+PS1='[\u@\h \W]$(parse_git_branch)\$ '
