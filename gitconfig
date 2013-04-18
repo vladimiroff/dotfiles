@@ -35,5 +35,7 @@
     ls = ls-files
     st = status
     tree = log --graph --simplify-by-decoration --pretty=format:'%d' --all
+    sync = !git pull && git push
+
 
 # vim: set filetype=.gitconfig:
