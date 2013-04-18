@@ -1,0 +1,2 @@
+#!/bin/bash
+konsole --nofork --geometry 1000x600 -e vim $1
