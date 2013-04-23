@@ -42,3 +42,6 @@ alias ..='cd ..'
 alias o='kde-open'
 
 alias go-test='autocompile.py . .go go-red-green'
+
+# Temp fix for skype in Arch
+alias skype='LD_PRELOAD=~/dotfiles/tmp/lib32/libgobject-2.0.so.0.3400.3 skype'
