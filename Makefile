@@ -1,5 +1,5 @@
 SHELL := /bin/bash
-ALL   := bash tmux X git vim pip ipython pentadactyl
+ALL   := bash tmux X git vim pip ipython pentadactyl kde
 
 update:
 	git pull
@@ -36,3 +36,8 @@ install-pip:
 
 install-pentadactyl:
 	ln -fs `pwd`/pentadactylrc ~/.pentadactylrc
+
+install-kde:
+	mkdir -p ~/.kde4/share/config/
+	ln -fs `pwd`/kde/kglobalshortcutsrc ~/.kde4/share/config/
+	ln -fs `pwd`/kde/khotkeysrc ~/.kde4/share/config/
