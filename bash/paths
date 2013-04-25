@@ -1,5 +1,5 @@
 #!/bin/bash
 
 export GOPATH=$HOME/.go
-export PATH="$HOME/dotfiles/bin:$GOPATH/bin:$PATH"
+export PATH="$HOME/dotfiles/bin:$GOPATH/bin:$PATH:$HOME/.rvm/bin"
 
