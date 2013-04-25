@@ -1,7 +1,10 @@
 #!/bin/bash
 
-alias tmux='tmux -u -2 -q'
+alias ..='cd ..'
+alias o='kde-open'
 
+# tmux
+alias tmux='tmux -u -2 -q'
 alias t='tmux'
 alias ta='tmux attach'
 
@@ -10,9 +13,6 @@ alias ls='ls --color=auto'
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-
-# Clever, right?
-alias су='su'
 
 # Django (django-extensions and ipython required)
 alias manage='python2 manage.py'
@@ -35,10 +35,8 @@ alias hshellplus='hmanage shell_plus'
 alias hlogs='heroku logs -t'
 alias hdeploy='git hpush && hcollectstatic'
 
-# Rails
+# Ruby
 alias be='bundle exec'
 
-alias ..='cd ..'
-alias o='kde-open'
-
+# Red-Green test runners
 alias go-test='autocompile.py . .go go-red-green'
