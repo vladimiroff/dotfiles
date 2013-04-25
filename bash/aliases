@@ -40,3 +40,4 @@ alias be='bundle exec'
 
 # Red-Green test runners
 alias go-test='autocompile.py . .go go-red-green'
+alias django-test='autocompile.py . .py django-red-green'
