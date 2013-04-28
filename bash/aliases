@@ -4,7 +4,7 @@ alias ..='cd ..'
 alias o='kde-open'
 
 # systemd
-alias halt='systemctl poweroff'
+alias poweroff='systemctl poweroff'
 alias reboot='systemctl reboot'
 alias suspend='systemctl suspend'
 alias hibernate='systemctl hibernate'
