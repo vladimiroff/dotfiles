@@ -39,5 +39,4 @@ install-pentadactyl:
 
 install-kde:
 	mkdir -p ~/.kde4/share/config/
-	ln -fs `pwd`/kde/kglobalshortcutsrc ~/.kde4/share/config/
 	ln -fs `pwd`/kde/khotkeysrc ~/.kde4/share/config/
