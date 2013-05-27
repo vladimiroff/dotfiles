@@ -9,4 +9,4 @@ source $HOME/dotfiles/bash/config
 source $HOME/dotfiles/bash/functions
 source $HOME/dotfiles/bash/completion
 
-PS1='[\u@\h \W]$(parse_git_branch)\$ '
+PS1='\W>$(parse_git_branch parse_git_dirty) '
