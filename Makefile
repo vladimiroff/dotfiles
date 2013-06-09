@@ -18,7 +18,7 @@ install-bash:
 	ln -fs `pwd`/bash/profile ~/.bash_profile
 
 install-tmux:
-	ln -fs `pwd`/tmux.conf ~/.tmux.conf
+	ln -fs `pwd`/tmux/tmux.conf ~/.tmux.conf
 
 install-git:
 	ln -fs `pwd`/gitconfig ~/.gitconfig
