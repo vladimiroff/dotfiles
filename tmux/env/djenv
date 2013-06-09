@@ -1,0 +1,12 @@
+#!/bin/sh
+VENV_NAME=$1
+
+source /usr/bin/virtualenvwrapper_lazy.sh
+workon $VENV_NAME
+
+source devenv
+tmux send-keys -t $TMUX_SESSION_NAME:1 "workon $VENV_NAME; clear; vim" C-j
+tmux send-keys -t $TMUX_SESSION_NAME:1 "gn" C-j
+tmux send-keys -t $TMUX_SESSION_NAME:2.1 "workon $VENV_NAME; clear;  shellplus" C-j
+tmux send-keys -t $TMUX_SESSION_NAME:2.2 "workon $VENV_NAME clear" C-j
+tmux send-keys -t $TMUX_SESSION_NAME:2.3 "workon $VENV_NAME; clear; runserver" C-j
