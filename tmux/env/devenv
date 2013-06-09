@@ -6,3 +6,5 @@ tmux new-window -n shells -t $TMUX_SESSION_NAME
 tmux split-window -v -p 40 -t $TMUX_SESSION_NAME
 tmux split-window -h -t $TMUX_SESSION_NAME
 tmux select-window -t $TMUX_SESSION_NAME:1
+
+echo $TMUX_SESSION_NAME
