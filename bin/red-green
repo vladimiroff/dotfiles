@@ -6,7 +6,7 @@ fi
 
 clear
 tmux set -g status-bg yellow
-go test ./...
+$@
 
 if [ $? == 0 ]; then
     tmux set -g status-bg green
