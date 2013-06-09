@@ -2,8 +2,6 @@
 
 if [[ -n "$TMUX" ]]; then
     export TERM=screen-256color
-else
-    tmux new-session -s "main_`date +%s`"
 fi
 
 # sudo bash-comletion
