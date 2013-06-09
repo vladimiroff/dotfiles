@@ -2,8 +2,6 @@
 TMUX_SESSION_NAME='development'
 
 tmux new-session -s $TMUX_SESSION_NAME -n vim -d
-tmux send-keys -t $TMUX_SESSION_NAME 'source ~/.bashrc' C-j
-tmux send-keys -t $TMUX_SESSION_NAME 'vim' C-j
 tmux new-window -n shells -t $TMUX_SESSION_NAME
 tmux split-window -v -p 40 -t $TMUX_SESSION_NAME
 tmux split-window -h -t $TMUX_SESSION_NAME
