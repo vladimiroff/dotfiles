@@ -8,5 +8,6 @@ source $HOME/dotfiles/bash/aliases
 source $HOME/dotfiles/bash/config
 source $HOME/dotfiles/bash/functions
 source $HOME/dotfiles/bash/completion
+source $HOME/dotfiles/powerline/src/powerline/bindings/bash/powerline.sh
 
 PS1='\W $(parse_git_branch parse_git_dirty)> '
