@@ -57,11 +57,3 @@ c.PromptManager.color_scheme = 'Linux'
 
 c.HistoryManager.db_log_output = False
 c.HistoryManager.db_cache_size = 0
-
-#------------------------------------------------------------------------------
-# Powerline
-#------------------------------------------------------------------------------
-
-c.InteractiveShellApp.extensions = [
-    'powerline.bindings.ipython.post_0_11'
-]

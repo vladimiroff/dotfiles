@@ -42,13 +42,3 @@ install-pentadactyl:
 install-kde:
 	mkdir -p ~/.kde4/share/config/
 	ln -fs `pwd`/kde/khotkeysrc ~/.kde4/share/config/
-
-install-powerline:
-	mkdir -p ~/.config/powerline
-	ln -fs `pwd`/powerline/config/* ~/.config/powerline/
-
-# IMPORTANT: root permissions are required
-powerline-fonts:
-	cp powerline/src/font/PowerlineSymbols.otf /usr/share/fonts/misc/
-	cp powerline/src/font/10-powerline-symbols.conf /etc/fonts/conf.d/
-	fc-cache -vf /usr/share/fonts/misc/
