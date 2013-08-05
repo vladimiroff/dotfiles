@@ -19,4 +19,4 @@ export MOZ_DISABLE_PANGO=1
 export PYTHONDONTWRITEBYTECODE=1
 export WORKON_HOME=$HOME/.virtualenvs
 
-source /usr/bin/virtualenvwrapper_lazy.sh
+[[ -s /usr/bin/virtualenvwrapper_lazy.sh ]] && source /usr/bin/virtualenvwrapper_lazy.sh
