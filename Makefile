@@ -1,5 +1,5 @@
 SHELL := /bin/bash
-ALL   := bash tmux X git vim pip ipython pentadactyl kde
+ALL   := bash tmux X git vim pip ipython pentadactyl kde ranger
 
 update:
 	git pull
@@ -42,3 +42,7 @@ install-pentadactyl:
 install-kde:
 	mkdir -p ~/.kde4/share/config/
 	ln -fs `pwd`/kde/khotkeysrc ~/.kde4/share/config/
+
+install-ranger:
+	mkdir -p ~/.config/ranger/
+	ln -fs `pwd`/ranger/* ~/.config/ranger/
