@@ -2,6 +2,7 @@
 
 alias ..='cd ..'
 alias o='kde-open'
+alias present='present -base=assets'
 
 # systemd
 alias poweroff='systemctl poweroff'
