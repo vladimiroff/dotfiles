@@ -46,3 +46,6 @@ install-kde:
 install-ranger:
 	mkdir -p ~/.config/ranger/
 	ln -fs `pwd`/ranger/* ~/.config/ranger/
+
+install-zsh:
+	ln -fs `pwd`/zsh/zshrc ~/.zshrc

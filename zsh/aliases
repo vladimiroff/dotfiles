@@ -1,0 +1,3 @@
+#!/bin/zsh
+
+source ~/dotfiles/bash/aliases

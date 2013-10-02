@@ -1,0 +1,9 @@
+#!/bin/zsh
+[[ $- != *i* ]] && return
+
+source $HOME/dotfiles/zsh/paths
+source $HOME/dotfiles/zsh/aliases
+source $HOME/dotfiles/zsh/config
+# source $HOME/dotfiles/zsh/funcs
+# source $HOME/dotfiles/zsh/completion
+
