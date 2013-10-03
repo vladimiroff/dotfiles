@@ -6,7 +6,7 @@ setopt prompt_subst
 setopt transient_rprompt
 
 PROMPT='➔ '
-RPROMPT='%{$fg[yellow]%}%/ %{$fg_bold[yellow]%}$(vcprompt)%{$reset_color%}'
+RPROMPT='%{$fg[yellow]%}%/ %{$fg_bold[yellow]%}$(vcprompt -f "[%n:%b%m]")%{$reset_color%}'
 WORDCHARS=${WORDCHARS//[&=\/;\!#%\{]}
 
 setopt HIST_IGNORE_DUPS
