@@ -1,0 +1,4 @@
+#!/bin/zsh
+
+source ~/dotfiles/bash/funcs
+
