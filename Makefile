@@ -36,9 +36,6 @@ install-pip:
 	mkdir -p ~/.pip
 	ln -fs `pwd`/pip.conf ~/.pip/pip.conf
 
-install-pentadactyl:
-	ln -fs `pwd`/pentadactylrc ~/.pentadactylrc
-
 install-kde:
 	mkdir -p ~/.kde4/share/config/
 	ln -fs `pwd`/kde/khotkeysrc ~/.kde4/share/config/
