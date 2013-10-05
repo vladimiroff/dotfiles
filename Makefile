@@ -1,5 +1,5 @@
-SHELL := /bin/bash
-ALL   := bash tmux X git vim pip ipython pentadactyl kde ranger
+SHELL := /bin/zsh
+ALL   := bash tmux X git vim pip ipython kde ranger zsh
 
 update:
 	git pull
