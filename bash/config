@@ -7,16 +7,5 @@ fi
 # sudo bash-comletion
 complete -cf sudo
 
-export LC_ALL='en_US.UTF-8'
-export LANG='en_US.UTF-8'
-export GREP_OPTIONS='--color=auto'
-export GREP_COLOR='100;8'
-export EDITOR=vim
-export HISTCONTROL=ignoreboth
-export KWIN_DIRECT_GL=1
-export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel'
-export MOZ_DISABLE_PANGO=1
-export PYTHONDONTWRITEBYTECODE=1
-export WORKON_HOME=$HOME/.virtualenvs
 
 [[ -s /usr/bin/virtualenvwrapper_lazy.sh ]] && source /usr/bin/virtualenvwrapper_lazy.sh

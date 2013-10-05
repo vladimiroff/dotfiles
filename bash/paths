@@ -1,4 +1,0 @@
-#!/bin/bash
-
-export GOPATH=$HOME/go
-export PATH="$HOME/dotfiles/bin:$HOME/dotfiles/tmux/env:$GOPATH/bin:$PATH:$HOME/.rvm/bin"

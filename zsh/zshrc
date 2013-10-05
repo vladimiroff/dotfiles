@@ -1,13 +1,14 @@
 #!/bin/zsh
 [[ $- != *i* ]] && return
 
-source $HOME/dotfiles/zsh/paths
-source $HOME/dotfiles/zsh/aliases
+stty -ixon
+
+source $HOME/dotfiles/sh/environment
+source $HOME/dotfiles/sh/aliases
 source $HOME/dotfiles/zsh/funcs
 source $HOME/dotfiles/zsh/config
 source $HOME/dotfiles/zsh/completion
 
 if [[ -s /usr/bin/virtualenvwrapper_lazy.sh ]]; then
-    export VIRTUAL_ENV_DISABLE_PROMPT=1
     source /usr/bin/virtualenvwrapper_lazy.sh
 fi
