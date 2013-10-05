@@ -1,6 +1,5 @@
 #!/bin/bash
 
-export DOTFILES="$(dirname $0)/.."
 export GOPATH=$HOME/go
 export PATH="$DOTFILES/bin:$DOTFILES/tmux/env:$GOPATH/bin:$PATH:$HOME/.rvm/bin"
 export LC_ALL='en_US.UTF-8'

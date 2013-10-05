@@ -16,7 +16,7 @@ install-X:
 	ln -fs `pwd`/Xdefaults ~/.Xdefaults
 
 install-bash:
-	ln -fs `pwd`/bash/rc ~/.bashrc
+	ln -fs `pwd`/sh/rc ~/.bashrc
 	ln -fs `pwd`/bash/profile ~/.bash_profile
 
 install-tmux:
@@ -45,4 +45,4 @@ install-ranger:
 	ln -fs `pwd`/ranger/* ~/.config/ranger/
 
 install-zsh:
-	ln -fs `pwd`/zsh/zshrc ~/.zshrc
+	ln -fs `pwd`/sh/rc ~/.zshrc
