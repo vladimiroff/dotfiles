@@ -36,7 +36,5 @@
     st = status
     tree = log --graph --simplify-by-decoration --pretty=format:'%d' --all
     sync = !git pull && git push
-    pooh = !winnie_the_pooh.sh && git push
-
 
 # vim: set filetype=.gitconfig:
