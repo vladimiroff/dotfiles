@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-source $HOME/dotfiles/sh/funcs
+source $DOTFILES/sh/funcs
 
 function virtualenv_prompt_info() {
     if [ -n "$VIRTUAL_ENV" ]; then

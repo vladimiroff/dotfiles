@@ -3,11 +3,11 @@
 
 stty -ixon
 
-source $HOME/dotfiles/sh/environment
-source $HOME/dotfiles/sh/aliases
-source $HOME/dotfiles/zsh/funcs
-source $HOME/dotfiles/zsh/config
-source $HOME/dotfiles/zsh/completion
+source $DOTFILES/sh/environment
+source $DOTFILES/sh/aliases
+source $DOTFILES/zsh/funcs
+source $DOTFILES/zsh/config
+source $DOTFILES/zsh/completion
 
 if [[ -s /usr/bin/virtualenvwrapper_lazy.sh ]]; then
     source /usr/bin/virtualenvwrapper_lazy.sh

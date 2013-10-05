@@ -3,10 +3,10 @@
 
 stty -ixon
 
-source $HOME/dotfiles/sh/aliases
-source $HOME/dotfiles/bash/config
-source $HOME/dotfiles/sh/environment
-source $HOME/dotfiles/sh/funcs
-source $HOME/dotfiles/bash/completion
+source $DOTFILES/sh/aliases
+source $DOTFILES/bash/config
+source $DOTFILES/sh/environment
+source $DOTFILES/sh/funcs
+source $DOTFILES/bash/completion
 
 PS1='\W $(vcprompt -f "[%n:%b%m]")> '

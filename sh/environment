@@ -1,7 +1,8 @@
 #!/bin/bash
 
+export DOTFILES="$(dirname $0)/.."
 export GOPATH=$HOME/go
-export PATH="$HOME/dotfiles/bin:$HOME/dotfiles/tmux/env:$GOPATH/bin:$PATH:$HOME/.rvm/bin"
+export PATH="$DOTFILES/bin:$DOTFILES/tmux/env:$GOPATH/bin:$PATH:$HOME/.rvm/bin"
 export LC_ALL='en_US.UTF-8'
 export LANG='en_US.UTF-8'
 export GREP_OPTIONS='--color=auto'
