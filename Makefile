@@ -14,6 +14,7 @@ install-X:
 	ln -fs `pwd`/Xmodmap ~/.Xmodmap
 	ln -fs `pwd`/xinitrc ~/.xinitrc
 	ln -fs `pwd`/Xdefaults ~/.Xdefaults
+	ln -fs `pwd`/Xresources ~/.Xresources
 
 install-bash:
 	ln -fs `pwd`/sh/rc ~/.bashrc

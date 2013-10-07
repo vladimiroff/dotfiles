@@ -11,6 +11,8 @@ export HISTCONTROL=ignoreboth
 export KWIN_DIRECT_GL=1
 export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel'
 export MOZ_DISABLE_PANGO=1
+export GDK_USE_XFT=1
+export QT_XFT=true
 export PYTHONDONTWRITEBYTECODE=1
 export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUAL_ENV_DISABLE_PROMPT=1
