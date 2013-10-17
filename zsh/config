@@ -5,7 +5,7 @@ colors
 setopt prompt_subst
 setopt transient_rprompt
 
-PROMPT='➔ '
+PROMPT='-> '
 RPROMPT='%{$fg[green]%}$(virtualenv_prompt_info) %{$fg[cyan]%}%/ %{$fg_bold[cyan]%}$(vcprompt -f "[%n:%b%m]")%{$reset_color%}'
 WORDCHARS=${WORDCHARS//[&=\/;\!#%\{]}
 
