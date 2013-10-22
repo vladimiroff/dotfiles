@@ -1,4 +1,3 @@
-SHELL := /bin/zsh
 ALL   := bash tmux X git vim pip ipython kde ranger zsh
 
 update:
@@ -6,7 +5,6 @@ update:
 	git submodule sync
 	git submodule foreach "git checkout master; git pull origin master; echo"
 	$(MAKE) install
-	source ~/.bashrc
 
 install: $(ALL:%=install-%)
 
