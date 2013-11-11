@@ -4,7 +4,7 @@ export GOPATH=$HOME/go
 export PATH="$DOTFILES/bin:$DOTFILES/tmux/env:$GOPATH/bin:$PATH:$HOME/.rvm/bin"
 export LC_ALL='en_US.UTF-8'
 export LANG='en_US.UTF-8'
-export GREP_OPTIONS='--color=auto'
+export GREP_OPTIONS='--color=auto --binary-files=without-match --line-number --no-messages'
 export GREP_COLOR='100;8'
 export EDITOR=vim
 export HISTCONTROL=ignoreboth
