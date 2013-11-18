@@ -7,6 +7,7 @@ setopt transient_rprompt
 
 PROMPT='-> '
 RPROMPT='%{$fg[green]%}$(virtualenv_prompt_info) %{$fg[cyan]%}%/ %{$fg_bold[cyan]%}$(vcprompt -f "[%n:%b%m]")%{$reset_color%}'
+PROMPT_EOL_MARK=' ↴'
 WORDCHARS=${WORDCHARS//[&=\/;\!#%\{]}
 
 setopt HIST_IGNORE_DUPS
