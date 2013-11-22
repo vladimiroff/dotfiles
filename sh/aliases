@@ -5,6 +5,7 @@ alias o='kde-open'
 alias present='present -base=assets'
 alias df='df -hPT'
 alias du='du -ch'
+alias grep='grep --exclude-dir=.git --exclude=.tags --exclude-dir=.coverage'
 
 # systemd
 alias poweroff='systemctl poweroff'
