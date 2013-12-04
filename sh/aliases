@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 alias ..='cd ..'
 alias o='kde-open'
@@ -52,3 +52,7 @@ alias be='bundle exec'
 # Red-Green test runners
 alias go-test='autocompile.py . .go "red-green go test ./..."'
 alias django-test='autocompile.py . .py "red-green python manage.py test"'
+
+if [[ -s ./aliases.private ]]; then
+    source ./aliases.private
+fi
