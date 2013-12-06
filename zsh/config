@@ -18,10 +18,6 @@ HISTFILE=~/.zsh_history
 SAVEHIST=10000
 HISTSIZE=10000
 
-# Prevents from accidentally overwriting an existing file
-setopt NOCLOBBER
-
-
 bindkey -e
 
 # Bring back the Ctrl-x-e from bash
