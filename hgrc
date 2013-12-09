@@ -3,6 +3,7 @@ username = Kiril Vladimiroff <kiril@vladimiroff.org>
 editor = vim
 
 [alias]
+killitwithfire = revert --no-backup --all
 show = log --patch --verbose --rev
 status = diff --stat
 list = log -M --template '{node|short} | {date|isodatesec} | {author|user}: {desc|strip|firstline}\n'
