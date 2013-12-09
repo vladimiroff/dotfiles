@@ -1,6 +1,7 @@
 [ui]
 username = Kiril Vladimiroff <kiril@vladimiroff.org>
 editor = vim
+verbose = True
 
 [alias]
 killitwithfire = revert --no-backup --all
@@ -10,6 +11,8 @@ list = log -M --template '{node|short} | {date|isodatesec} | {author|user}: {des
 tree = list -G
 
 [pager]
+attend =
+ignore = commit, email, clone, update, merge, rebase, pull, push, revert, import, serve, record, backout, fold
 pager = LESS=FRSXQ less
 quiet = True
 
