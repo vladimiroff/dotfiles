@@ -16,6 +16,7 @@ quiet = True
 color =
 histedit =
 pager =
+progress =
 rebase =
 record =
 shelve =
