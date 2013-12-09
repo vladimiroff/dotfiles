@@ -1,5 +1,6 @@
 [ui]
 username = Kiril Vladimiroff <kiril@vladimiroff.org>
+editor = vim
 
 [alias]
 show = log --patch --verbose --rev
