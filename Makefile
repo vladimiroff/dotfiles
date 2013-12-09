@@ -1,4 +1,4 @@
-ALL   := bash tmux X git vim pip ipython kde ranger zsh
+ALL   := bash tmux X git mercurial vim pip ipython ranger zsh
 
 update:
 	git pull
