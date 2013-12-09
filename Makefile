@@ -35,13 +35,12 @@ install-pip:
 	mkdir -p ~/.pip
 	ln -fs `pwd`/pip.conf ~/.pip/pip.conf
 
-install-kde:
-	mkdir -p ~/.kde4/share/config/
-	ln -fs `pwd`/kde/khotkeysrc ~/.kde4/share/config/
-
 install-ranger:
 	mkdir -p ~/.config/ranger/
 	ln -fs `pwd`/ranger/* ~/.config/ranger/
 
 install-zsh:
 	ln -fs `pwd`/sh/rc ~/.zshrc
+
+install-mercurial:
+	ln -fs `pwd`/hgrc ~/.hgrc

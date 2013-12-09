@@ -1,0 +1,19 @@
+[ui]
+username = Kiril Vladimiroff <kiril@vladimiroff.org>
+
+[alias]
+show = log --patch --verbose --rev
+status = diff --stat
+
+[pager]
+pager = LESS=FRSXQ less
+quiet = True
+
+[extensions]
+color =
+histedit =
+pager =
+rebase =
+record =
+shelve =
+strip =
