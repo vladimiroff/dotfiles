@@ -12,7 +12,7 @@ tree = list -G
 
 [pager]
 attend =
-ignore = commit, email, clone, update, merge, rebase, pull, push, revert, import, serve, record, backout, fold
+ignore = commit, email, clone, update, merge, rebase, pull, push, revert, import, serve, record, backout, fold, update
 pager = LESS=FRSXQ less
 quiet = True
 
