@@ -3,18 +3,25 @@ username = Kiril Vladimiroff <kiril@vladimiroff.org>
 editor = vim
 verbose = True
 
+[bookmarks]
+track.current = True
+
 [alias]
 killitwithfire = revert --no-backup --all
 show = log --patch --verbose --rev
 status = diff --stat
-list = log -M --template '{node|short} | {date|isodatesec} | {author|user}: {desc|strip|firstline}\n'
-tree = list -G
+list = log --style=$DOTFILES/hg/templates/map-cmdline.slog
+nlog = log --style=$DOTFILES/hg/templates/map-cmdline.nlog
+tree = glog --style=$DOTFILES/hg/templates/map-cmdline.sglog
 
 [pager]
 attend =
-ignore = commit, email, clone, update, merge, rebase, pull, push, revert, import, serve, record, backout, fold, update
+ignore = commit, ci, email, clone, update, merge, rebase, pull, push, revert, import, serve, record, backout, fold, update
 pager = LESS=FRSXQ less
 quiet = True
+
+[progress]
+delay = 1.0
 
 [extensions]
 color =
@@ -25,3 +32,4 @@ rebase =
 record =
 shelve =
 strip =
+graphlog =
