@@ -15,8 +15,7 @@ nlog = log --style=$DOTFILES/hg/templates/map-cmdline.nlog
 tree = glog --style=$DOTFILES/hg/templates/map-cmdline.sglog
 
 [pager]
-attend =
-ignore = commit, ci, email, clone, update, merge, rebase, pull, push, revert, import, serve, record, backout, fold, update
+attend = annotate, blame, cat, diff, export, list, log, nlog, show, st, status, tree
 pager = LESS=FRSXQ less
 quiet = True
 
