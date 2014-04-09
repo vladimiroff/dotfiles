@@ -1,7 +1,12 @@
 [ui]
 username = Kiril Vladimiroff <kiril@vladimiroff.org>
 editor = vim
+merge = internal:merge
 verbose = True
+
+[merge-tools]
+vimdiff.executable = vim
+vimdiff.args = -d $base $local $output $other -c "wincmd J"
 
 [bookmarks]
 track.current = True
@@ -32,3 +37,7 @@ record =
 shelve =
 strip =
 graphlog =
+
+
+[tortoisehg]
+vdiff = kdiff3
