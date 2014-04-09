@@ -27,3 +27,9 @@ else
 echo "'$1' is not a valid file"
   fi
 }
+
+# Go coverage test with fancy visualization in the browser
+function go-web-coverage() {
+    go test -coverprofile=coverage.out $1 && go tool cover -html=coverage.out
+    [[ -f coverage.out  ]] && unlink coverage.out
+}
