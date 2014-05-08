@@ -36,5 +36,6 @@
     st = status
     tree = log --graph --simplify-by-decoration --pretty=format:'%d' --all
     sync = !git pull && git push
+    fsync = !git stash && git pull && git push && git stash pop
 
 # vim: set filetype=.gitconfig:
