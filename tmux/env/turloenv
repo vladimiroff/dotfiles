@@ -27,4 +27,4 @@ tmux send-keys -t $TMUX_SESSION_NAME:8 "workon $VENV_NAME; clear" C-j
 tmux send-keys -t $TMUX_SESSION_NAME:8 "turlo_background_worker debug" C-j
 
 tmux send-keys -t $TMUX_SESSION_NAME:9 "workon $VENV_NAME; clear" C-j
-tmux send-keys -t $TMUX_SESSION_NAME:9 "./manage.py turlo_run" C-j
+tmux send-keys -t $TMUX_SESSION_NAME:9 "TURLO_CONSOLE=1 ./manage.py turlo_run" C-j
