@@ -15,7 +15,7 @@ alias hibernate='systemctl hibernate'
 alias suspend-hybrid='systemctl suspend-hybrid'
 
 # tmux
-alias tmux='tmux -u -2 -q'
+alias tmux='TERM=screen-256color-bce tmux -u -2 -q'
 alias t='tmux'
 alias ta='tmux attach'
 
