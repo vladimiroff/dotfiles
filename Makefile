@@ -26,6 +26,7 @@ install-git:
 
 install-vim:
 	[[ -d ~/.vim ]] || ( git clone git@github.com:Vladimiroff/Vimfiles.git ~/.vim && cd ~/.vim && make install )
+	ln -fs `pwd`/ctags ~/.ctags
 
 install-ipython:
 	[[ -d ~/.config/ipython ]] || mkdir -p ~/.config/ipython/profile_default
