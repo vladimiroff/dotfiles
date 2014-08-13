@@ -13,6 +13,7 @@ export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.defaultlaf=com.su
 export MOZ_DISABLE_PANGO=1
 export GDK_USE_XFT=1
 export QT_XFT=true
+export QT_PLUGIN_PATH="$QT_PLUGIN_PATH:/usr/lib32/kde4/plugins/"
 export PYTHONDONTWRITEBYTECODE=1
 export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUAL_ENV_DISABLE_PROMPT=1
