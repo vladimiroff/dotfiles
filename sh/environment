@@ -1,19 +1,19 @@
 #!/bin/bash
 
-export GOPATH=$HOME/go
-export PATH="$DOTFILES/bin:$DOTFILES/tmux/env:$GOPATH/bin:$PATH:$HOME/.rvm/bin"
-export LC_ALL='en_US.UTF-8'
-export LANG='en_US.UTF-8'
-export GREP_OPTIONS='--color=auto --binary-files=without-match --line-number --no-messages'
-export GREP_COLOR='100;8'
 export EDITOR=vim
+export GDK_USE_XFT=1
+export GOPATH=$HOME/go
+export GREP_COLOR="100;8"
+export GREP_OPTIONS="--color=auto --binary-files=without-match --line-number --no-messages"
 export HISTCONTROL=ignoreboth
 export KWIN_DIRECT_GL=1
-export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel'
+export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
 export MOZ_DISABLE_PANGO=1
-export GDK_USE_XFT=1
-export QT_XFT=true
-export QT_PLUGIN_PATH="$QT_PLUGIN_PATH:/usr/lib32/kde4/plugins/"
+export PATH="$DOTFILES/bin:$DOTFILES/tmux/env:$GOPATH/bin:$PATH:$HOME/.rvm/bin"
 export PYTHONDONTWRITEBYTECODE=1
-export WORKON_HOME=$HOME/.virtualenvs
+export QT_PLUGIN_PATH="$QT_PLUGIN_PATH:/usr/lib32/kde4/plugins/"
+export QT_XFT=true
 export VIRTUAL_ENV_DISABLE_PROMPT=1
+export WORKON_HOME=$HOME/.virtualenvs
+export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel"
