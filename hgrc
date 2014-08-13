@@ -18,6 +18,7 @@ status = diff --stat
 list = log --style=$DOTFILES/hg/templates/map-cmdline.slog
 nlog = log --style=$DOTFILES/hg/templates/map-cmdline.nlog
 tree = glog --style=$DOTFILES/hg/templates/map-cmdline.sglog
+p = pull --rebase
 
 [pager]
 attend = annotate, blame, cat, diff, export, list, log, nlog, show, st, status, tree
