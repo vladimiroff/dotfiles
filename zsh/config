@@ -23,4 +23,5 @@ bindkey -e
 # Bring back the Ctrl-x-e from bash
 autoload edit-command-line
 zle -N edit-command-line
-bindkey '^Xe' edit-command-line
+bindkey '^[[3~' delete-char
+bindkey '^Xe'   edit-command-line
