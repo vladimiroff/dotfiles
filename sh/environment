@@ -4,7 +4,6 @@ export EDITOR=vim
 export GDK_USE_XFT=1
 export GOPATH=$HOME/go
 export GREP_COLOR="100;8"
-export GREP_OPTIONS="--color=auto --binary-files=without-match --line-number --no-messages"
 export HISTCONTROL=ignoreboth
 export KWIN_DIRECT_GL=1
 export LANG="en_US.UTF-8"
