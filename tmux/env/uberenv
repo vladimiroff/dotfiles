@@ -1,0 +1,36 @@
+#!/bin/sh
+if [ -z "$1" ]
+  then
+    echo "You need to provide project name. Options are:"
+    echo `find ~/Uber -maxdepth 1 -type l -print | awk 'gsub(/.*\//, "")'`
+    exit 1
+fi
+
+VENV_NAME="$1"
+TMUX_SESSION_NAME="uber/$1"
+
+cd ~/Uber/$1
+source /usr/bin/virtualenvwrapper_lazy.sh
+
+tmux new-session -s $TMUX_SESSION_NAME -n vim -d
+tmux new-window -n vagrant -t $TMUX_SESSION_NAME
+tmux new-window -n git -t $TMUX_SESSION_NAME
+tmux new-window -n stuff -t $TMUX_SESSION_NAME
+tmux new-window -n sync -t $TMUX_SESSION_NAME -t 9
+tmux select-window -t $TMUX_SESSION_NAME:1
+
+tmux send-keys -t $TMUX_SESSION_NAME:1 "workon $VENV_NAME; clear" C-j
+tmux send-keys -t $TMUX_SESSION_NAME:1 "vim" C-j
+tmux send-keys -t $TMUX_SESSION_NAME:1 "gn" C-j
+
+tmux send-keys -t $TMUX_SESSION_NAME:2 "workon $VENV_NAME; vagrant ssh 1" C-j
+tmux send-keys -t $TMUX_SESSION_NAME:2 "cd $1; source env/bin/activate; clear" C-j
+
+tmux send-keys -t $TMUX_SESSION_NAME:3 "workon $VENV_NAME; clear; git status" C-j
+
+tmux send-keys -t $TMUX_SESSION_NAME:4 "workon $VENV_NAME; clear" C-j
+
+tmux send-keys -t $TMUX_SESSION_NAME:9 "workon $VENV_NAME; clear" C-j
+tmux send-keys -t $TMUX_SESSION_NAME:9 "boxer sync kiril.eu.dev.uber.com uber/$1" C-j
+
+tmux attach -t $TMUX_SESSION_NAME
