@@ -33,3 +33,16 @@ function go-web-coverage() {
     go test -coverprofile=coverage.out $1 && go tool cover -html=coverage.out
     [[ -f coverage.out  ]] && unlink coverage.out
 }
+
+# Boxer
+cdsync () {
+    cd $(boxer sync_dir $@)
+}
+
+editsync () {
+    $EDITOR $(boxer sync_dir $@)
+}
+
+opensync () {
+    open $(boxer sync_dir $@)
+}
