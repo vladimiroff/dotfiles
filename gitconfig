@@ -39,3 +39,9 @@
     fsync = !git stash && git pull && git push && git stash pop
 
 # vim: set filetype=.gitconfig:
+[branch]
+	autosetuprebase = always
+[rerere]
+	enabled = true
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
