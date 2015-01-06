@@ -1,4 +1,4 @@
-ALL   := bash tmux X git mercurial vim pip ipython ranger zsh
+ALL   := bash tmux X git mercurial vim ipython ranger zsh
 
 update:
 	git pull
@@ -31,10 +31,6 @@ install-vim:
 install-ipython:
 	[[ -d ~/.config/ipython ]] || mkdir -p ~/.config/ipython/profile_default
 	ln -fs `pwd`/ipython/profile_default/ipython_config.py ~/.config/ipython/profile_default/ipython_config.py
-
-install-pip:
-	mkdir -p ~/.pip
-	ln -fs `pwd`/pip.conf ~/.pip/pip.conf
 
 install-ranger:
 	mkdir -p ~/.config/ranger/
