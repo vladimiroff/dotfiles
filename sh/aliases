@@ -23,6 +23,7 @@ alias suspend-hybrid='systemctl suspend-hybrid'
 alias tmux='tmux -u -2 -q'
 alias t='tmux'
 alias ta='tmux attach'
+alias tk='tmux kill-session -t'
 
 # ls
 alias ls='ls --color=auto'
