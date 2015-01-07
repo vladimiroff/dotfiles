@@ -2,14 +2,14 @@
 if [ -z "$1" ]
   then
     echo "You need to provide project name. Options are:"
-    echo `find ~/Uber -maxdepth 1 -type l -print | awk 'gsub(/.*\//, "")'`
+    echo `find $UBER_HOME -maxdepth 1 -type l -print | awk 'gsub(/.*\//, "")'`
     exit 1
 fi
 
 VENV_NAME="$1"
 TMUX_SESSION_NAME="uber/$1"
 
-cd ~/Uber/$1
+cd $UBER_HOME/$1
 source /usr/bin/virtualenvwrapper_lazy.sh
 
 tmux new-session -s $TMUX_SESSION_NAME -n vim -d
