@@ -11,6 +11,7 @@ TMUX_SESSION_NAME="uber/$1"
 
 cd $UBER_HOME/$1
 source /usr/bin/virtualenvwrapper_lazy.sh
+source $DOTFILES/sh/aliases
 
 tmux new-session -s $TMUX_SESSION_NAME -n vim -d
 tmux new-window -n vagrant -t $TMUX_SESSION_NAME
