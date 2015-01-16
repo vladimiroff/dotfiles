@@ -3,7 +3,6 @@
     email = kiril@vladimiroff.org
 [github]
     user = Vladimiroff
-    token = 24036f9b96f9edf326b8aa00c7394025
 [giggle]
     main-window-view = HistoryView
     main-window-maximized = false
