@@ -31,27 +31,6 @@ alias ll='ls -alhF'
 alias la='ls -A'
 alias l='ls -CF'
 
-# Django (django-extensions and ipython required)
-alias manage='python2 manage.py'
-alias tests='manage test'
-alias syncdb='manage syncdb'
-alias dbshell='manage dbshell'
-alias shellplus='manage shell_plus --ipython'
-alias runserver='manage runserver 0.0.0.0:8000; stty sane'
-alias runserver_plus='manage runserver_plus 0.0.0.0:8000; stty sane'
-alias migrate='manage migrate'
-alias genschema='manage schemamigration'
-alias datamigration='manage datamigration'
-alias collectstatic='manage collectstatic --noinput'
-alias celery='manage celery worker --loglevel=info'
-
-# Heroku
-alias hmanage='heroku run python manage.py'
-alias hcollectstatic='hmanage collectstatic --noinput'
-alias hshellplus='hmanage shell_plus'
-alias hlogs='heroku logs -t'
-alias hdeploy='git hpush && hcollectstatic'
-
 # Ruby
 alias be='bundle exec'
 
