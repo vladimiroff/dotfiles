@@ -1,8 +1,10 @@
 #!/bin/sh
-if [ -z "$1" ]
+PROJECTS=`find $UBER_HOME -maxdepth 1 -type l -print | awk 'gsub(/.*\//, "")'`
+
+if [ -z "$1" ] || [[ ! $PROJECTS =~ "$1" ]]
   then
-    echo "You need to provide project name. Options are:"
-    echo `find $UBER_HOME -maxdepth 1 -type l -print | awk 'gsub(/.*\//, "")'`
+    echo "You need to provide existing project name. Options are:"
+    echo $PROJECTS
     exit 1
 fi
 
