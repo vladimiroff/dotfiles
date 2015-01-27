@@ -9,13 +9,15 @@
     main-window-geometry = 1286x743+0+0
 [gui]
     editor = vim
+[color]
+    ui = true
 [core]
     editor = vim
     whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+[branch]
+    autosetuprebase = always
 [merge]
     tool = vimdiff
-[color]
-    ui = true
 [diff]
     tool = vimdiff
 [difftool]
@@ -25,6 +27,8 @@
     rebase = true
 [push]
     default = tracking
+[rerere]
+    enabled = true
 [alias]
     b = branch
     co = checkout
@@ -36,11 +40,6 @@
     tree = log --graph --simplify-by-decoration --pretty=format:'%d' --all
     sync = !git pull && git push
     fsync = !git stash && git pull && git push && git stash pop
-
-# vim: set filetype=.gitconfig:
-[branch]
-	autosetuprebase = always
-[rerere]
-	enabled = true
 [url "ssh://git@github.com/"]
-	insteadOf = https://github.com/
+    insteadOf = https://github.com/
+# vim: set filetype=.gitconfig:
