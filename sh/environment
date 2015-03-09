@@ -13,6 +13,8 @@ export PATH="$HOME/bin:$DOTFILES/bin:$DOTFILES/tmux/env:$GOPATH/bin:$PATH:$HOME/
 export PYTHONDONTWRITEBYTECODE=1
 export QT_PLUGIN_PATH="$QT_PLUGIN_PATH:/usr/lib32/kde4/plugins/"
 export QT_XFT=true
+export QT_STYLE_OVERRIDE="Breeze"
+export QT_QPA_PLATFORMTHEME=kde
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 export WORKON_HOME=$HOME/.virtualenvs
 export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel"
