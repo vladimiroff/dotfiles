@@ -8,6 +8,7 @@ export HISTCONTROL=ignoreboth
 export KWIN_DIRECT_GL=1
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 export MOZ_DISABLE_PANGO=1
 export PATH="$HOME/bin:$DOTFILES/bin:$DOTFILES/tmux/env:$GOPATH/bin:$PATH:$HOME/.rvm/bin"
 export PYTHONDONTWRITEBYTECODE=1

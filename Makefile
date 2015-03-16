@@ -1,4 +1,4 @@
-ALL   := bash tmux X git mercurial vim ipython ranger zsh
+ALL   := bash tmux X git mercurial vim ipython ranger zsh systemd
 
 update:
 	git pull
@@ -41,3 +41,6 @@ install-zsh:
 
 install-mercurial:
 	ln -fs `pwd`/hgrc ~/.hgrc
+
+install-systemd:
+	cp `pwd`/systemd/user/* ~/.config/systemd/user/
