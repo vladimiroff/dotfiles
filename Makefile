@@ -43,4 +43,5 @@ install-mercurial:
 	ln -fs `pwd`/hgrc ~/.hgrc
 
 install-systemd:
+	mkdir -p ~/.config/systemd/user/
 	cp `pwd`/systemd/user/* ~/.config/systemd/user/
