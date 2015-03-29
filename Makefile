@@ -9,10 +9,10 @@ update:
 install: $(ALL:%=install-%)
 
 install-X:
-	ln -fs `pwd`/Xmodmap ~/.Xmodmap
-	ln -fs `pwd`/xinitrc ~/.xinitrc
-	ln -fs `pwd`/Xdefaults ~/.Xdefaults
-	ln -fs `pwd`/Xresources ~/.Xresources
+	ln -fs `pwd`/x11/Xmodmap ~/.Xmodmap
+	ln -fs `pwd`/x11/xinitrc ~/.xinitrc
+	ln -fs `pwd`/x11/Xdefaults ~/.Xdefaults
+	ln -fs `pwd`/x11/Xresources ~/.Xresources
 
 install-bash:
 	ln -fs `pwd`/sh/rc ~/.bashrc
