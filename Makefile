@@ -9,10 +9,12 @@ update:
 install: $(ALL:%=install-%)
 
 install-X:
+	mkdir -p ~/.config/touchegg
 	ln -fs `pwd`/x11/Xmodmap ~/.Xmodmap
 	ln -fs `pwd`/x11/xinitrc ~/.xinitrc
 	ln -fs `pwd`/x11/Xdefaults ~/.Xdefaults
 	ln -fs `pwd`/x11/Xresources ~/.Xresources
+	ln -fs `pwd`/x11/touchegg.conf ~/.config/touchegg/touchegg.conf
 
 install-bash:
 	ln -fs `pwd`/sh/rc ~/.bashrc
