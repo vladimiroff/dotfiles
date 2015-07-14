@@ -30,7 +30,7 @@ tmux select-window -t $TMUX_SESSION_NAME:1
 
 tmux send-keys -t $TMUX_SESSION_NAME:1 "workon $VENV_NAME; clear" C-j
 tmux send-keys -t $TMUX_SESSION_NAME:1 "vim" C-j
-tmux send-keys -t $TMUX_SESSION_NAME:1 "gn" C-j
+tmux send-keys -t $TMUX_SESSION_NAME:1 " n" C-j
 
 tmux send-keys -t $TMUX_SESSION_NAME:2 "workon $VENV_NAME; boxer v kiril" C-j
 tmux send-keys -t $TMUX_SESSION_NAME:2 "cd $1; source env/bin/activate; clear" C-j
