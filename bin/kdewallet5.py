@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 """D-Bus client for KDE Wallet 5.
 
-Example usage:
+Example usage::
 
     >>> with kdewallet5.Wallet("my-super-secret-wallet", "foobar") as wallet:
     ...    my_password = wallet.read_password("secrets", "mothers_maiden_name")
@@ -61,7 +61,7 @@ class Wallet:
         """Check that we have a handle for a wallet that is still open."""
         return self._handle > 0 and self.method('isOpen')(self.name)
 
-    def close(self, *, force=False):
+    def close(self, force=False):
         """Close the wallet.
 
         This will delete the saved handle and will send a call to close the
