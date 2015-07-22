@@ -1,0 +1,32 @@
+# Plain text
+text/plain; $EDITOR %s
+
+# Images
+image/jpg; kde-open %s
+image/jpeg; kde-open %s
+image/pjpeg; kde-open %s
+image/png; kde-open %s
+image/gif; kde-open %s
+
+# PDFs
+application/pdf; kde-open %s
+
+# HTML
+text/html; w3m -I %{charset} -T text/html; needsterminal; copiousoutput;
+
+# MS Word
+application/msword; kde-open %s
+
+# MS Excel
+application/x-msexcel; kde-open %s
+application/ms-exc; kde-open %s
+application/excel; kde-open %s
+application/msexcel; kde-open %s
+application/vnd.ms-exc; kde-open %s
+application/vnd.ms-excel; kde-open %s
+
+# Unidentified files
+application/octet-stream; kde-open %s
+
+# Unidentified files
+.*/.*; kde-open %s

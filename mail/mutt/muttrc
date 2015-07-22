@@ -1,0 +1,84 @@
+# --- Paths ---
+set folder           = ~/mail
+set alias_file       = ~/.mutt/alias
+set header_cache     = ~/.cache/mutt/headers
+set message_cachedir = ~/.cache/mutt/bodies
+set certificate_file = ~/.mutt/certificates
+set mailcap_path     = ~/.mutt/mailcap
+set tmpdir           = ~/.cache/mutt/tmp
+
+# Default inbox.
+set spoolfile = "+personal/INBOX"
+
+# --- Basic ---
+set wait_key = no
+set mbox_type = Maildir
+set timeout = 3
+set mail_check = 0
+unset move
+
+# Don't ask for confirmations
+set delete
+unset confirmappend
+set quit
+
+# Bell on new mails
+set beep_new
+
+# Strip headers and eval mimes
+set pipe_decode
+set thorough_search
+
+# --- Status Bar ---
+set status_chars  = " *%A"
+set status_format = "───[ Folder: %f ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
+
+# --- Header ---
+ignore *
+unhdr_order *
+unignore from: to: cc: date: subject:
+hdr_order from: to: cc: date: subject:
+
+# --- Index View ---
+set date_format = "%Y-%m-%d %I:%M"
+set index_format = "[%Z]  %D  %-20.20F  %s"
+set sort = threads
+set sort_aux = reverse-last-date-received
+set sort_re
+set reply_regexp = "^(([Rr][Ee]?(\[[0-9]+\])?: *)?(\[[^]]+\] *)?)*"
+
+# --- Pager View ---
+set pager_index_lines = 10 # number of index lines to show
+set pager_context = 3      # number of context lines to show
+set pager_stop             # don't go to next message automatically
+set menu_scroll            # scroll in menus
+set tilde                  # show tildes like in vim
+unset markers              # no ugly plus signs
+
+set quote_regexp = "^( {0,4}[>|:#%]| {0,4}[a-z0-9]+[>|]+)+"
+alternative_order text/plain text/enriched text/html
+
+# --- Compose View ---
+set realname = "Kiril Vladimirov"    # who am i?
+set envelope_from                    # which from?
+set sig_dashes                       # dashes before sig
+set edit_headers                     # show headers when composing
+set fast_reply                       # skip to compose when replying
+set askcc                            # ask for CC:
+set fcc_attach                       # save attachments with the body
+unset mime_forward                   # forward attachments as part of body
+set forward_format = "Fwd: %s"       # format of subject when forwarding
+set forward_decode                   # decode when forwarding
+set attribution = "On %d, %n wrote:" # format of quoting header
+set reply_to                         # reply to Reply to: field
+set reverse_name                     # reply as whomever it was to
+set include                          # include message in replies
+set forward_quote                    # include message in forwards
+
+# --- Send ---
+set from     = "kiril@vladimiroff.org"
+set sendmail = "/usr/bin/msmtp -a personal"
+set sendmail_wait = 0
+unset record
+
+source ~/.mutt/bindings

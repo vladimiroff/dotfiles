@@ -1,4 +1,4 @@
-ALL   := bash tmux X git mercurial vim ipython ranger zsh systemd
+ALL   := bash tmux X git mercurial vim ipython ranger zsh systemd mutt
 
 update:
 	git pull
@@ -47,3 +47,10 @@ install-mercurial:
 install-systemd:
 	mkdir -p ~/.config/systemd/user/
 	cp `pwd`/systemd/user/* ~/.config/systemd/user/
+
+install-mutt:
+	ln -fs `pwd`/mail/mutt/ ~/.mutt
+	ln -fs `pwd`/mail/offlineimaprc ~/.offlineimaprc
+	ln -fs `pwd`/mail/msmtprc ~/.msmtprc
+	mkdir -p ~/.cache/mutt/{headers,bodies,tmp}
+	mkdir -p ~/.cache/mutt/{headers,bodies}

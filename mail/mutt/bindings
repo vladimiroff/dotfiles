@@ -1,0 +1,33 @@
+# --- Index ---
+bind index gg    first-entry
+bind index G     last-entry
+bind index R     group-reply
+bind index <tab> sync-mailbox
+bind index p     recall-message
+
+macro index \Cr "T~U<enter><tag-prefix><clear-flag>N<untag-pattern>.<enter>" "mark all messages as read"
+macro index <space> "<collapse-thread>\Cl"
+
+# Sync email
+macro index O "<shell-escape>offlineimap<enter>"           "sync all mail"
+macro index o "<shell-escape>offlineimap -qf INBOX<enter>" "sync inbox"
+
+# Saner copy/move dialogs
+macro index C "<copy-message>?<toggle-mailboxes>" "copy a message to a mailbox"
+macro index M "<save-message>?<toggle-mailboxes>" "move a message to a mailbox"
+
+
+# --- Pager ---
+bind pager k  previous-line
+bind pager j  next-line
+bind pager gg top
+bind pager G  bottom
+bind pager R  group-reply
+bind attach <return> view-mailcap # View attachments properly
+
+macro pager \cb <pipe-entry>'w3m'<enter> 'Follow links in w3m'
+
+# --- Compose ---
+bind compose p postpone-message
+
+# vim: ft=muttrc
