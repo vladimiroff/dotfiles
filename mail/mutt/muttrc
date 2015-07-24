@@ -10,6 +10,11 @@ set tmpdir           = ~/.cache/mutt/tmp
 # Default inbox.
 set spoolfile = "+personal/INBOX"
 
+# Mailboxes to show in the sidebar.
+mailboxes +personal/INBOX \
+          +personal/archive \
+          +personal/sent \
+
 # --- Basic ---
 set wait_key = no
 set mbox_type = Maildir
@@ -32,6 +37,11 @@ set thorough_search
 # --- Status Bar ---
 set status_chars  = " *%A"
 set status_format = "───[ Folder: %f ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
+
+# --- Sidebar ---
+set sidebar_delim = "  │"
+set sidebar_visible = yes
+set sidebar_width = 32
 
 # --- Header ---
 ignore *
