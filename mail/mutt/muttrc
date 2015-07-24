@@ -92,3 +92,4 @@ set sendmail_wait = 0
 unset record
 
 source ~/.mutt/bindings
+source ~/.mutt/colors
