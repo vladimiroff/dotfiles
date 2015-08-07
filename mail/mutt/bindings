@@ -1,12 +1,12 @@
 # --- Index ---
-bind index gg    first-entry
-bind index G     last-entry
-bind index R     group-reply
-bind index <tab> sync-mailbox
-bind index p     recall-message
+bind index gg      first-entry
+bind index G       last-entry
+bind index R       group-reply
+bind index <tab>   sync-mailbox
+bind index p       recall-message
+bind index <space> collapse-thread
 
 macro index \cr "T~U<enter><tag-prefix><clear-flag>N<untag-pattern>.<enter>" "mark all messages as read"
-macro index <space> "<collapse-thread>\cl"
 
 # Sync email
 macro index O "<shell-escape>offlineimap<enter>"           "sync all mail"
