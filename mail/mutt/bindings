@@ -18,8 +18,8 @@ macro index M "<save-message>?<toggle-mailboxes>" "move a message to a mailbox"
 
 
 # --- Pager ---
-bind pager k  previous-line
-bind pager j  next-line
+bind pager K  previous-line
+bind pager J  next-line
 bind pager gg top
 bind pager G  bottom
 bind pager R  group-reply
