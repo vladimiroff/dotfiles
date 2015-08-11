@@ -15,4 +15,3 @@ if [[ -s /usr/bin/virtualenvwrapper_lazy.sh ]]; then
 fi
 
 # vim: set filetype=sh:
-alias china='ssh-agent bash --rcfile ~/.ssh/china/.bash_profile.cn'
