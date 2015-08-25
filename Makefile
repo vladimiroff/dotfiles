@@ -12,48 +12,48 @@ install: $(ALL:%=install-%)
 
 install-X:
 	mkdir -p ~/.config/touchegg
-	ln -fs `pwd`/x11/Xmodmap ~/.Xmodmap
-	ln -fs `pwd`/x11/xinitrc ~/.xinitrc
-	ln -fs `pwd`/x11/Xdefaults ~/.Xdefaults
-	ln -fs `pwd`/x11/Xresources ~/.Xresources
-	ln -fs `pwd`/x11/touchegg.conf ~/.config/touchegg/touchegg.conf
+	ln -fs $(dotfiles)/x11/Xmodmap ~/.Xmodmap
+	ln -fs $(dotfiles)/x11/xinitrc ~/.xinitrc
+	ln -fs $(dotfiles)/x11/Xdefaults ~/.Xdefaults
+	ln -fs $(dotfiles)/x11/Xresources ~/.Xresources
+	ln -fs $(dotfiles)/x11/touchegg.conf ~/.config/touchegg/touchegg.conf
 
 install-bash:
-	ln -fs `pwd`/sh/rc ~/.bashrc
-	ln -fs `pwd`/bash/profile ~/.bash_profile
+	ln -fs $(dotfiles)/sh/rc ~/.bashrc
+	ln -fs $(dotfiles)/bash/profile ~/.bash_profile
 
 install-tmux:
-	ln -fs `pwd`/tmux/tmux.conf ~/.tmux.conf
+	ln -fs $(dotfiles)/tmux/tmux.conf ~/.tmux.conf
 
 install-git:
-	ln -fs `pwd`/gitconfig ~/.gitconfig
+	ln -fs $(dotfiles)/gitconfig ~/.gitconfig
 
 install-vim:
 	[[ -d ~/.vim ]] || ( git clone git@github.com:Vladimiroff/Vimfiles.git ~/.vim && cd ~/.vim && make install )
-	ln -fs `pwd`/ctags ~/.ctags
+	ln -fs $(dotfiles)/ctags ~/.ctags
 
 install-ipython:
 	[[ -d ~/.config/ipython ]] || mkdir -p ~/.config/ipython/profile_default
-	ln -fs `pwd`/ipython/profile_default/ipython_config.py ~/.config/ipython/profile_default/ipython_config.py
+	ln -fs $(dotfiles)/ipython/profile_default/ipython_config.py ~/.config/ipython/profile_default/ipython_config.py
 
 install-ranger:
 	mkdir -p ~/.config/ranger/
-	ln -fs `pwd`/ranger/* ~/.config/ranger/
+	ln -fs $(dotfiles)/ranger/* ~/.config/ranger/
 
 install-zsh:
-	ln -fs `pwd`/sh/rc ~/.zshrc
+	ln -fs $(dotfiles)/sh/rc ~/.zshrc
 
 install-mercurial:
-	ln -fs `pwd`/hgrc ~/.hgrc
+	ln -fs $(dotfiles)/hgrc ~/.hgrc
 
 install-systemd:
 	mkdir -p ~/.config/systemd/user/
-	cp `pwd`/systemd/user/* ~/.config/systemd/user/
+	cp $(dotfiles)/systemd/user/* ~/.config/systemd/user/
 	sed -i "/Environment\=/c\Environment\=\"DOTFILES\=$(dotfiles)\"" ~/.config/systemd/user/offlineimap.service
 
 install-mutt:
-	ln -fs `pwd`/mail/mutt/ ~/.mutt
-	ln -fs `pwd`/mail/offlineimaprc ~/.offlineimaprc
-	ln -fs `pwd`/mail/msmtprc ~/.msmtprc
+	ln -fs $(dotfiles)/mail/mutt/ ~/.mutt
+	ln -fs $(dotfiles)/mail/offlineimaprc ~/.offlineimaprc
+	ln -fs $(dotfiles)/mail/msmtprc ~/.msmtprc
 	mkdir -p ~/.cache/mutt/{headers,bodies,tmp}
 	mkdir -p ~/.cache/mutt/{headers,bodies}
