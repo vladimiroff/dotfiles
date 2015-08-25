@@ -3,6 +3,7 @@ Description=Offlineimap Service
 
 [Service]
 Type=oneshot
+Environment=
 ExecStart=/usr/bin/offlineimap -o
 
 [Install]

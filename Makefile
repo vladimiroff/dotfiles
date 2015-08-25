@@ -1,5 +1,7 @@
 ALL   := bash tmux X git mercurial vim ipython ranger zsh systemd mutt
 
+dotfiles = `pwd`
+
 update:
 	git pull
 	git submodule sync
@@ -47,6 +49,7 @@ install-mercurial:
 install-systemd:
 	mkdir -p ~/.config/systemd/user/
 	cp `pwd`/systemd/user/* ~/.config/systemd/user/
+	sed -i "/Environment\=/c\Environment\=\"DOTFILES\=$(dotfiles)\"" ~/.config/systemd/user/offlineimap.service
 
 install-mutt:
 	ln -fs `pwd`/mail/mutt/ ~/.mutt
