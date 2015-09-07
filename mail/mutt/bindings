@@ -28,10 +28,6 @@ bind attach <return> view-mailcap # View attachments properly
 macro pager \cb <pipe-entry>'w3m'<enter> 'Follow links in w3m'
 
 
-# --- Compose ---
-bind compose p postpone-message
-
-
 # --- Sidebar Navigation ---
 bind index,pager \cn sidebar-next
 bind index,pager \cp sidebar-prev
