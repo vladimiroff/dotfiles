@@ -91,5 +91,13 @@ set sendmail = "/usr/bin/msmtp -a personal"
 set sendmail_wait = 0
 unset record
 
+# --- GPG ---
+source ~/.mutt/gpg.rc
+set pgp_use_gpg_agent = yes
+set pgp_sign_as = 9B24A670
+set pgp_timeout = 3600
+set crypt_autosign = yes
+set crypt_replyencrypt = yes
+
 source ~/.mutt/bindings
 source ~/.mutt/colors
