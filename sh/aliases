@@ -7,7 +7,7 @@ alias df='df -hPT'
 alias du='du -ch'
 alias grep="grep --exclude-dir=.git --exclude=.tags --exclude-dir=.coverage\
  --exclude-dir=.hg --exclude-dir=.ropeproject --exclude=tags\
- --color=auto --binary-files=without-match --line-number --no-messages\
+ --color=auto --binary-files=without-match --no-messages\
  --exclude-dir=.git --exclude=.tags --exclude-dir=.coverage --exclude-dir=.hg\
  --exclude-dir=.ropeproject --exclude=tags"
 alias fuck='sudo $(fc -ln -1)'
