@@ -30,6 +30,9 @@ alias ll='ls -alhF'
 alias la='ls -A'
 alias l='ls -CF'
 
+# Run mutt from outside virtual environment
+alias mutt='command -v deactivate >/dev/null 2>&1 && deactivate; mutt'
+
 # Ruby
 alias be='bundle exec'
 
