@@ -19,7 +19,7 @@ if [ $? -eq 0 ]; then
     exit 0
 fi
 
-ssh-add
+ssh-add < /dev/null
 
 tmux new-session -s $TMUX_SESSION_NAME -n vim -d
 tmux new-window -n vagrant -t $TMUX_SESSION_NAME
