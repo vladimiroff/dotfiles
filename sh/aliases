@@ -34,6 +34,9 @@ alias l='ls -CF'
 # Run mutt from outside virtual environment
 alias mutt='command -v deactivate >/dev/null 2>&1 && deactivate; mutt'
 
+# Activate Python env
+alias actiavte='source env/bin/activate'
+
 # Ruby
 alias be='bundle exec'
 
