@@ -1,7 +1,8 @@
 # --- Index ---
 bind index gg      first-entry
 bind index G       last-entry
-bind index R       group-reply
+bind index r       group-reply
+bind index R       reply
 bind index <tab>   sync-mailbox
 bind index p       recall-message
 bind index <space> collapse-thread
@@ -22,7 +23,8 @@ bind pager K  previous-line
 bind pager J  next-line
 bind pager gg top
 bind pager G  bottom
-bind pager R  group-reply
+bind pager r  group-reply
+bind pager R  reply
 bind attach <return> view-mailcap # View attachments properly
 
 macro pager \cb <pipe-entry>'w3m'<enter> 'Follow links in w3m'
