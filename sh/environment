@@ -1,5 +1,6 @@
 #!/bin/bash
 
+export TERM=xterm-256color
 export EDITOR=vim
 export GDK_USE_XFT=1
 export GOPATH=$HOME/go
