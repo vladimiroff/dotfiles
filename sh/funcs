@@ -46,3 +46,12 @@ editsync () {
 opensync () {
     open $(boxer sync_dir $@)
 }
+
+activate_env() {
+    if [ -d "./env" ]; then
+        source env/bin/activate
+    else
+        source /usr/bin/virtualenvwrapper_lazy.sh
+        workon $VENV_NAME
+    fi
+}
