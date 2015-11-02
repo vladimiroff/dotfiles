@@ -11,7 +11,6 @@ VENV_NAME="$1"
 TMUX_SESSION_NAME="uber/$1"
 
 cd $UBER_HOME/$1
-source /usr/bin/virtualenvwrapper_lazy.sh
 source $DOTFILES/sh/aliases
 
 tmux attach -t $TMUX_SESSION_NAME
@@ -28,18 +27,18 @@ tmux new-window -n stuff -t $TMUX_SESSION_NAME
 tmux new-window -n sync -t $TMUX_SESSION_NAME -t 9
 tmux select-window -t $TMUX_SESSION_NAME:1
 
-tmux send-keys -t $TMUX_SESSION_NAME:1 "workon $VENV_NAME; clear" C-j
+tmux send-keys -t $TMUX_SESSION_NAME:1 "activate_env; clear" C-j
 tmux send-keys -t $TMUX_SESSION_NAME:1 "vim" C-j
 tmux send-keys -t $TMUX_SESSION_NAME:1 " n" C-j
 
-tmux send-keys -t $TMUX_SESSION_NAME:2 "workon $VENV_NAME; boxer v kiril" C-j
+tmux send-keys -t $TMUX_SESSION_NAME:2 "activate_env; boxer v kiril" C-j
 tmux send-keys -t $TMUX_SESSION_NAME:2 "cd $1; source env/bin/activate; clear" C-j
 
-tmux send-keys -t $TMUX_SESSION_NAME:3 "workon $VENV_NAME; clear; git status" C-j
+tmux send-keys -t $TMUX_SESSION_NAME:3 "activate_env; clear; git status" C-j
 
-tmux send-keys -t $TMUX_SESSION_NAME:4 "workon $VENV_NAME; clear" C-j
+tmux send-keys -t $TMUX_SESSION_NAME:4 "activate_env; clear" C-j
 
-tmux send-keys -t $TMUX_SESSION_NAME:9 "workon $VENV_NAME; clear" C-j
+tmux send-keys -t $TMUX_SESSION_NAME:9 "activate_env; clear" C-j
 tmux send-keys -t $TMUX_SESSION_NAME:9 "boxer sync kiril uber/$1" C-j
 
 tmux attach -t $TMUX_SESSION_NAME
