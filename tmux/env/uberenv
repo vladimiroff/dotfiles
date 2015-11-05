@@ -20,7 +20,7 @@ fi
 
 ssh-add < /dev/null
 
-tmux new-session -s $TMUX_SESSION_NAME -n vim -d
+tmux new-session -s $TMUX_SESSION_NAME -n nvim -d
 tmux new-window -n vagrant -t $TMUX_SESSION_NAME
 tmux new-window -n git -t $TMUX_SESSION_NAME
 tmux new-window -n stuff -t $TMUX_SESSION_NAME
@@ -28,7 +28,7 @@ tmux new-window -n sync -t $TMUX_SESSION_NAME -t 9
 tmux select-window -t $TMUX_SESSION_NAME:1
 
 tmux send-keys -t $TMUX_SESSION_NAME:1 "activate_env; clear" C-j
-tmux send-keys -t $TMUX_SESSION_NAME:1 "vim" C-j
+tmux send-keys -t $TMUX_SESSION_NAME:1 "nvim" C-j
 tmux send-keys -t $TMUX_SESSION_NAME:1 " n" C-j
 
 tmux send-keys -t $TMUX_SESSION_NAME:2 "activate_env; boxer v kiril" C-j
