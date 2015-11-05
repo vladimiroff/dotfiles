@@ -3,7 +3,6 @@
 autoload -U colors
 colors
 setopt prompt_subst
-setopt transient_rprompt
 
 PROMPT='$(exit_code_prompt) '
 RPROMPT='%{$fg_bold[%F{34}]%}$(virtualenv_prompt_info)%{$reset_color%} %{$fg_bold[%F{250}]%}%n:%F{240}%/ %F{240}$(vcprompt -f "[%n:%b%m]")%{$reset_color%}'
