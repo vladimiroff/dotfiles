@@ -1,15 +1,13 @@
 #!/bin/sh
-if [ ! -z $1 ] && [ $1 == end ]; then
-    tmux set -g status-bg cyan
-    exit 0
-fi
-
 clear
-tmux set -g status-bg yellow
+tmux set -g status-bg "#FFFFDD"
 $@
 
 if [ $? == 0 ]; then
-    tmux set -g status-bg green
+    tmux set -g status-bg "#36A736"
 else
-    tmux set -g status-bg red
+    tmux set -g status-bg "#FF5454"
 fi
+
+sleep 5
+tmux source-file ~/.tmux.conf
