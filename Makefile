@@ -17,6 +17,7 @@ install-X:
 	ln -fs $(dotfiles)/x11/Xdefaults ~/.Xdefaults
 	ln -fs $(dotfiles)/x11/Xresources ~/.Xresources
 	ln -fs $(dotfiles)/x11/touchegg.conf ~/.config/touchegg/touchegg.conf
+	ln -fs $(dotfiles)/x11/libinput-gestures.conf ~/.config/libinput-gestures.conf
 
 install-bash:
 	ln -fs $(dotfiles)/sh/rc ~/.bashrc
