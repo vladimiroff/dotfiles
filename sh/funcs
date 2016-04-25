@@ -55,3 +55,23 @@ activate_env() {
         workon $VENV_NAME
     fi
 }
+
+# Use sshaskpass if available
+ensure_ssh() {
+    /usr/bin/ssh-add < /dev/null || /usr/bin/ssh-add
+}
+
+ssh() {
+    ensure_ssh
+    /usr/bin/ssh "$@"
+}
+
+rsync() {
+    ensure_ssh
+    /usr/bin/rsync "$@"
+}
+
+scp() {
+    ensure_ssh
+    /usr/bin/scp "$@"
+}
