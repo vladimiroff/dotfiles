@@ -34,8 +34,8 @@ install-vim:
 	ln -fs $(dotfiles)/ctags ~/.ctags
 
 install-ipython:
-	[[ -d ~/.config/ipython ]] || mkdir -p ~/.config/ipython/profile_default
-	ln -fs $(dotfiles)/ipython/profile_default/ipython_config.py ~/.config/ipython/profile_default/ipython_config.py
+	[[ -d ~/.ipython ]] || mkdir -p ~/.ipython/profile_default
+	ln -fs $(dotfiles)/ipython/profile_default/ipython_config.py ~/.ipython/profile_default/ipython_config.py
 
 install-ranger:
 	mkdir -p ~/.config/ranger/
