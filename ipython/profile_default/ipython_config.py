@@ -19,7 +19,6 @@ c.InteractiveShellApp.exec_lines = ['%autoreload 2']
 #------------------------------------------------------------------------------
 
 # TerminalInteractiveShell will inherit config from: InteractiveShell
-c.TerminalInteractiveShell.exec_files = ['00-bash_aliases.ipy']
 c.TerminalInteractiveShell.autoedit_syntax = False
 c.TerminalInteractiveShell.color_info = True
 c.TerminalInteractiveShell.history_length = 10000
