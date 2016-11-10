@@ -1,6 +1,7 @@
 [user]
     name = Kiril Vladimirov
     email = kiril@vladimiroff.org
+    signingkey = E8AC87A89B24A670
 [github]
     user = Vladimiroff
 [giggle]
