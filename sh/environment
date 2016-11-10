@@ -26,7 +26,7 @@ export QT_STYLE_OVERRIDE="Breeze"
 export QT_QPA_PLATFORMTHEME=kde
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 export WORKON_HOME=$HOME/.virtualenvs
-export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel"
+export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel -Dsun.java2d.dpiaware=false"
 export WINEDLLOVERRIDES="winemenubuilder.exe=d"
 
 # Uber
