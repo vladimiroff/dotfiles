@@ -21,6 +21,7 @@
     tool = vimdiff
 [diff]
     tool = vimdiff
+    compactionHeuristic = true
 [difftool]
     cmd = vimdiff $LOCAL $REMOTE
     prompt = false
