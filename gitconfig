@@ -3,7 +3,7 @@
     email = kiril@vladimiroff.org
     signingkey = E8AC87A89B24A670
 [github]
-    user = Vladimiroff
+    user = vladimiroff
 [giggle]
     main-window-view = HistoryView
     main-window-maximized = false
