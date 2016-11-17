@@ -14,7 +14,6 @@ export LANG="en_US.UTF-8"
 export LANGUAGE="en_US"
 export LC_ALL="en_US.UTF-8"
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
-export SSH_ASKPASS=/usr/bin/ksshaskpass
 export MOZ_DISABLE_PANGO=1
 export MOZ_USE_XINPUT2=1
 export MOZ_USE_OMTC=1
@@ -28,3 +27,9 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 export WORKON_HOME=$HOME/.virtualenvs
 export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel -Dsun.java2d.dpiaware=false"
 export WINEDLLOVERRIDES="winemenubuilder.exe=d"
+
+if [ $DESKTOP_SESSION = "kde" ]; then
+	export SSH_ASKPASS=/usr/bin/ksshaskpass
+elif [ $DESKTOP_SESSION = "gnome" ]; then
+	export SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
+fi
