@@ -31,5 +31,5 @@ export WINEDLLOVERRIDES="winemenubuilder.exe=d"
 if [ $DESKTOP_SESSION = "kde" ]; then
 	export SSH_ASKPASS=/usr/bin/ksshaskpass
 elif [ $DESKTOP_SESSION = "gnome" ]; then
-	export SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
+	export SSH_ASKPASS=/usr/lib64/seahorse/seahorse-ssh-askpass
 fi
