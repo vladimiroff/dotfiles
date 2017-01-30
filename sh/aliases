@@ -11,6 +11,7 @@ alias grep="grep --exclude-dir=.git --exclude=.tags --exclude-dir=.coverage\
  --exclude-dir=.git --exclude=.tags --exclude-dir=.coverage --exclude-dir=.hg\
  --exclude-dir=.ropeproject --exclude=tags"
 alias fuck='sudo $(fc -ln -1)'
+alias copy='xsel -ib'
 
 # systemd
 alias poweroff='systemctl poweroff'
