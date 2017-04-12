@@ -45,4 +45,10 @@
     root = rev-parse --show-toplevel
 [url "ssh://git@github.com/"]
     insteadOf = https://github.com/
+[url "git://anongit.kde.org/"]
+   insteadOf = kde:
+[url "ssh://git@git.kde.org/"]
+   pushInsteadOf = kde:
+[url "git@git.kde.org:"]
+   pushInsteadOf = kde:
 # vim: set filetype=.gitconfig:
