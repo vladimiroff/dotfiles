@@ -1,4 +1,4 @@
-text/html; firefox %s
+text/html; firefox '%s'; nametemplate=%s.html; copiousoutput
 text/*; $EDITOR %s
 application/*; kde-open %s
 audio/*; kde-open %s
