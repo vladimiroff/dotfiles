@@ -4,9 +4,9 @@ tmux set -g status-bg "#FFFFDD"
 $@
 
 if [ $? == 0 ]; then
-    tmux set -g status-bg "#36A736"
+    tmux set -g status-bg "#9ADA99"
 else
-    tmux set -g status-bg "#FF5454"
+    tmux set -g status-bg "#DA6969"
 fi
 
 sleep 5
