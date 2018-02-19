@@ -10,10 +10,9 @@
 # Example:
 #   ./autocompile.py /my-latex-document-dir .tex,.bib "make pdf"
 #
-from __future__ import print_function
-
 import subprocess
 import sys
+
 import pyinotify
 
 
@@ -37,9 +36,17 @@ def auto_compile(path, extension, cmd):
     wm = pyinotify.WatchManager()
     handler = OnWriteHandler(cwd=path, extension=extension, cmd=cmd)
     notifier = pyinotify.Notifier(wm, default_proc_fun=handler)
-    wm.add_watch(path, pyinotify.ALL_EVENTS, rec=True, auto_add=True)
+    wm.add_watch(path, pyinotify.IN_CLOSE_WRITE, rec=True, auto_add=True)
     print('==> Start monitoring %s (type c^c to exit)' % path)
-    notifier.loop()
+    notifier.loop(clear_burst)
+
+
+def clear_burst(notifier):
+    if notifier.check_events(timeout=10):
+        notifier.read_events()
+
+    notifier._eventq.clear()
+
 
 if __name__ == '__main__':
     if len(sys.argv) < 3:
