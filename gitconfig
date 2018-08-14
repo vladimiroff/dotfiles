@@ -4,12 +4,6 @@
     signingkey = E8AC87A89B24A670
 [github]
     user = vladimiroff
-[giggle]
-    main-window-view = HistoryView
-    main-window-maximized = false
-    main-window-geometry = 1286x743+0+0
-[gui]
-    editor = vim
 [color]
     ui = true
 [core]
