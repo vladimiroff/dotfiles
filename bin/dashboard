@@ -1,0 +1,14 @@
+#!/bin/sh
+
+SHOW="true"
+MSG="Time for a break"
+
+if [ "$1" -eq "0" ]; then
+	SHOW=false
+	MSG="Get back to work"
+fi
+
+
+dbus-send --type=method_call  --dest='org.kde.plasmashell' '/PlasmaShell' org.kde.PlasmaShell.setDashboardShown boolean:$SHOW
+notify-send "$MSG"
+
