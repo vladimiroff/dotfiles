@@ -31,6 +31,8 @@
     default = tracking
 [rerere]
     enabled = true
+[commit]
+    gpgsign = true
 [alias]
     b = branch
     co = checkout
