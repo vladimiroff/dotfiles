@@ -1,50 +1,48 @@
 [user]
-    name = Kiril Vladimirov
-    email = kiril@vladimiroff.org
-    signingkey = E8AC87A89B24A670
+	name = Kiril Vladimiroff
+	email = kiril@vladimiroff.org
+	signingkey = E8AC87A89B24A670
 [github]
-    user = vladimiroff
+	user = vladimiroff
 [color]
-    ui = true
+	ui = true
 [core]
-    editor = vim
-    whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+	editor = vim
+	whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
 [branch]
-    autosetuprebase = always
+	autosetuprebase = always
 [merge]
-    tool = vimdiff
+	tool = vimdiff
 [diff]
-    tool = vimdiff
-    compactionHeuristic = true
+	tool = vimdiff
+	compactionHeuristic = true
 [difftool]
-    cmd = vimdiff $LOCAL $REMOTE
-    prompt = false
+	cmd = vimdiff $LOCAL $REMOTE
+	prompt = false
 [pull]
-    rebase = true
+	rebase = true
 [push]
-    default = tracking
+	default = tracking
 [rerere]
-    enabled = true
+	enabled = true
 [commit]
-    gpgsign = true
+	gpgsign = true
 [alias]
-    b = branch
-    co = checkout
-    hpush = push heroku master
-    l = log --graph --all --abbrev-commit --date=relative --date-order --date=format:'%Y-%m-%d %H:%M:%S' --pretty=format:'%C(bold red)%h%C(reset) - %C(cyan)(%ai)%C(reset) %C(bold green)%s%C(reset) %C(bold blue) - %an <%aE>%C(reset) %C(bold red)[%GK]%C(reset)%C(bold yellow)%d%C(reset)'
-    locals = log --branches --not --remotes
-    ls = ls-files
-    st = status
-    tree = log --graph --simplify-by-decoration --all --date=format:'%Y-%m-%d %H:%M:%S' --pretty=format:'%C(bold red)%d%C(reset) - %C(cyan)(%ad)%C(reset) %C(bold green)%s%C(reset) %C(bold blue) - %an <%aE>%C(reset) %C(bold red)[%GK]%C(reset)'
-    sync = !git pull && git push
-    fsync = !git stash && git pull && git push && git stash pop
-    root = rev-parse --show-toplevel
-[url "ssh://git@github.com/"]
-    insteadOf = https://github.com/
+	b = branch
+	co = checkout
+	hpush = push heroku master
+	l = log --graph --all --abbrev-commit --date=relative --date-order --date=format:'%Y-%m-%d %H:%M:%S' --pretty=format:'%C(bold red)%h%C(reset) - %C(cyan)(%ai)%C(reset) %C(bold green)%s%C(reset) %C(bold blue) - %an <%aE>%C(reset) %C(bold red)[%GK]%C(reset)%C(bold yellow)%d%C(reset)'
+	locals = log --branches --not --remotes
+	ls = ls-files
+	st = status
+	tree = log --graph --simplify-by-decoration --all --date=format:'%Y-%m-%d %H:%M:%S' --pretty=format:'%C(bold red)%d%C(reset) - %C(cyan)(%ad)%C(reset) %C(bold green)%s%C(reset) %C(bold blue) - %an <%aE>%C(reset) %C(bold red)[%GK]%C(reset)'
+	sync = !git pull && git push
+	fsync = !git stash && git pull && git push && git stash pop
+	root = rev-parse --show-toplevel
 [url "git://anongit.kde.org/"]
-   insteadOf = kde:
+	insteadOf = kde:
 [url "ssh://git@git.kde.org/"]
-   pushInsteadOf = kde:
+	pushInsteadOf = kde:
 [url "git@git.kde.org:"]
-   pushInsteadOf = kde:
+	pushInsteadOf = kde:
 # vim: set filetype=.gitconfig:
