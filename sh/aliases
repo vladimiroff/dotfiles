@@ -22,7 +22,7 @@ alias hibernate='systemctl hibernate'
 alias suspend-hybrid='systemctl suspend-hybrid'
 
 # tmux
-alias tmux='tmux -u -2 -q'
+alias tmux='tmux -u -2'
 alias ta='tmux attach'
 alias tk='tmux kill-session -t'
 
