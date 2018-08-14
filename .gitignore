@@ -1,2 +1,3 @@
 *.private
 *.pyc
+mail/mutt/alias
