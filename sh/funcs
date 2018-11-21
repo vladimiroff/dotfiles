@@ -35,19 +35,6 @@ function go-web-coverage() {
     [[ -f coverage.out  ]] && unlink coverage.out
 }
 
-# Boxer
-cdsync () {
-    cd $(boxer sync_dir $@)
-}
-
-editsync () {
-    $EDITOR $(boxer sync_dir $@)
-}
-
-opensync () {
-    open $(boxer sync_dir $@)
-}
-
 activate_env() {
     if [ -d "./env" ]; then
         source env/bin/activate
