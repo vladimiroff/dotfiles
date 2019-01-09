@@ -1,6 +1,6 @@
 text/html; firefox '%s'; nametemplate=%s.html; copiousoutput
 text/*; $EDITOR %s
-application/*; kde-open %s
-audio/*; kde-open %s
-image/*; kde-open %s
-video/*; kde-open %s
+application/*; xdg-open %s
+audio/*; xdg-open %s
+image/*; xdg-open %s
+video/*; xdg-open %s
