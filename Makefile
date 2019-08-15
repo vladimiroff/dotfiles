@@ -1,4 +1,4 @@
-ALL   := bash tmux X git mercurial vim ipython ranger zsh systemd mutt
+ALL   := bash tmux X git mercurial vim ipython zsh systemd mutt
 
 dotfiles = `pwd`
 
@@ -36,10 +36,6 @@ install-vim:
 install-ipython:
 	[[ -d ~/.ipython ]] || mkdir -p ~/.ipython/profile_default
 	ln -fs $(dotfiles)/ipython/profile_default/ipython_config.py ~/.ipython/profile_default/ipython_config.py
-
-install-ranger:
-	mkdir -p ~/.config/ranger/
-	ln -fs $(dotfiles)/ranger/* ~/.config/ranger/
 
 install-zsh:
 	ln -fs $(dotfiles)/sh/rc ~/.zshrc
