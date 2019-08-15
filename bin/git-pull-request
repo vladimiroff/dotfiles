@@ -1,9 +1,9 @@
 #!/bin/sh
 current_branch=$(git rev-parse --abbrev-ref HEAD)
-git push --set-upstream origin "$current_branch" >&1 | while IFS= read -r line
+git push -v --set-upstream origin "$current_branch" $2 2>&1 | while IFS= read -r line
 do
 	echo "$line"
-	url=$(echo "$line" | grep -Eo '(http|https)://[^ ]+')
+	url=$(echo "$line" | grep "remote:" | grep -Eo '(http|https)://[^ ]+')
 	if [ -n "$url" ]
 	then
 		xdg-open "$url" > /dev/null
