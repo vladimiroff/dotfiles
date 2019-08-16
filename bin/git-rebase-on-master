@@ -1,0 +1,5 @@
+#!/bin/sh
+current_branch=$(git rev-parse --abbrev-ref HEAD)
+git checkout master
+git pull origin master --rebase
+git rebase master "$current_branch"
