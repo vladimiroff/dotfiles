@@ -13,22 +13,15 @@ export LANG="en_US.UTF-8"
 export LANGUAGE="en_US"
 export LC_ALL="en_US.UTF-8"
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
-export MOZ_DISABLE_PANGO=1
 export MOZ_USE_XINPUT2=1
-export MOZ_USE_OMTC=1
 export PATH="$HOME/bin:$DOTFILES/bin:$DOTFILES/tmux/env:$GOPATH/bin:$PATH:$HOME/.cargo/bin"
 export PYTHONDONTWRITEBYTECODE=1
-export QT_PLUGIN_PATH="$QT_PLUGIN_PATH:/usr/lib32/kde4/plugins/"
 export QT_XFT=true
 export QT_STYLE_OVERRIDE="Breeze"
 export QT_QPA_PLATFORMTHEME=kde
 export VIRTUAL_ENV_DISABLE_PROMPT=1
-export WORKON_HOME=$HOME/.virtualenvs
 export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel -Dsun.java2d.dpiaware=false"
-export WINEDLLOVERRIDES="winemenubuilder.exe=d"
 
 if [[ $DESKTOP_SESSION == *"kde"* ]] || [[ $DESKTOP_SESSION == *"plasma"* ]]; then
 	export SSH_ASKPASS=/usr/bin/ksshaskpass
-elif [[ $DESKTOP_SESSION == "gnome" ]]; then
-	export SSH_ASKPASS=/usr/lib64/seahorse/seahorse-ssh-askpass
 fi
