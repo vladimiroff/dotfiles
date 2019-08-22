@@ -1,26 +1,18 @@
 #!/bin/bash
 
-function cl () {
-   if [ $# = 0 ]; then
-      cd && ls -l
-   else
-      cd "$*" && ls -l
-   fi
-}
-
 function extract () {
-  if [ -f $1 ]; then
+  if [ -f "$1" ]; then
 case $1 in
-      *.tar.*) tar xvf $1 ;;
-      *.tbz2) tar xvjf $1 ;;
-      *.tgz) tar xvzf $1 ;;
-      *.txz) tar xvJf $1 ;;
-      *.bz2) bunzip2 $1 ;;
-      *.rar) unrar e $1 ;;
-      *.gz) gunzip $1 ;;
-      *.zip) unzip $1 ;;
-      *.Z) uncompress $1 ;;
-      *.7z) 7z x $1 ;;
+      *.tar.*) tar xvf "$1" ;;
+      *.tbz2) tar xvjf "$1" ;;
+      *.tgz) tar xvzf "$1" ;;
+      *.txz) tar xvJf "$1" ;;
+      *.bz2) bunzip2 "$1" ;;
+      *.rar) unrar e "$1" ;;
+      *.gz) gunzip "$1" ;;
+      *.zip) unzip "$1" ;;
+      *.Z) uncompress "$1" ;;
+      *.7z) 7z x "$1" ;;
       *) echo "'$1' cannot be extracted via extract()" ;;
     esac
 else
@@ -33,15 +25,6 @@ function go-web-coverage() {
     cmd="go test -coverprofile=coverage.out -coverpkg=$1 $1"
     eval "$cmd" && go tool cover -html=coverage.out
     [[ -f coverage.out  ]] && unlink coverage.out
-}
-
-activate_env() {
-    if [ -d "./env" ]; then
-        source env/bin/activate
-    else
-        source /usr/bin/virtualenvwrapper_lazy.sh
-        workon $VENV_NAME
-    fi
 }
 
 # Use sshaskpass if available
