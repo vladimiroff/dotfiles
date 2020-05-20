@@ -1,17 +1,14 @@
+# shellcheck disable=1090,2009
 [[ $- != *i* ]] && return
 
 stty -ixon
 
-SHELL_NAME=`basename $SHELL`
+SHELL_NAME=$(ps | grep $$ | awk '{ print $4 }')
 export DOTFILES="$HOME/dotfiles"
-source $DOTFILES/sh/environment
-source $DOTFILES/sh/aliases
-source $DOTFILES/$SHELL_NAME/funcs
-source $DOTFILES/$SHELL_NAME/config
-source $DOTFILES/$SHELL_NAME/completion
-
-if [[ -s /usr/bin/virtualenvwrapper_lazy.sh ]]; then
-    source /usr/bin/virtualenvwrapper_lazy.sh
-fi
+source "$DOTFILES/sh/environment"
+source "$DOTFILES/sh/aliases"
+source "$DOTFILES/$SHELL_NAME/funcs"
+source "$DOTFILES/$SHELL_NAME/config"
+source "$DOTFILES/$SHELL_NAME/completion"
 
 # vim: set filetype=sh:
