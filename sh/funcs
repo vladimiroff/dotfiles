@@ -22,7 +22,7 @@ echo "'$1' is not a valid file"
 
 # Go coverage test with fancy visualization in the browser
 function go-web-coverage() {
-    cmd="go test -coverprofile=coverage.out -coverpkg=$1 $1"
+    cmd="go test -coverprofile=coverage.out -coverpkg=$1 -covermode=count $1"
     eval "$cmd" && go tool cover -html=coverage.out
     [[ -f coverage.out  ]] && unlink coverage.out
 }
