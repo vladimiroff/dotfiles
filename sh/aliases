@@ -45,6 +45,8 @@ alias be='bundle exec'
 alias go-test='autocompile.py . .go "red-green go test ./..."'
 alias django-test='autocompile.py . .py "red-green python manage.py test"'
 
+alias qrcode='qrencode -o - -t utf8'
+
 if [[ -s $DOTFILES/sh/aliases.private ]]; then
     source $DOTFILES/sh/aliases.private
 fi
