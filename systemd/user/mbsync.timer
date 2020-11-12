@@ -1,0 +1,10 @@
+[Unit]
+Description=mbsync Query Timer
+
+[Timer]
+OnUnitInactiveSec=5min
+OnBootSec=1min
+Unit=mbsync.service
+
+[Install]
+WantedBy=mail.target

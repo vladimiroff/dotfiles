@@ -1,13 +1,12 @@
 [Unit]
-Description=Offlineimap Service
+Description=mbsync Service
 Wants=network-online.target
 After=network-online.target
 
 [Service]
 Type=oneshot
-Environment=
-TimeoutSec=120
-ExecStart=/usr/bin/offlineimap -o
+TimeoutSec=360
+ExecStart=/usr/bin/mbsync -a
 
 [Install]
 WantedBy=mail.target
