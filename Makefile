@@ -1,4 +1,4 @@
-ALL   := bash tmux X git mercurial vim ipython zsh systemd mutt
+ALL   := bash tmux X git mercurial vim ipython zsh systemd mutt konsole
 
 dotfiles = `pwd`
 
@@ -53,3 +53,9 @@ install-mutt:
 	ln -fs $(dotfiles)/mail/msmtprc ~/.msmtprc
 	mkdir -p ~/.cache/mutt/{headers,bodies,tmp}
 	mkdir -p ~/.cache/mutt/{headers,bodies}
+
+install-konsole:
+	mkdir -p ~/.local/share/konsole/
+	ln -fs $(dotfiles)/konsole/nord.colorscheme ~/.local/share/konsole/nord.colorscheme
+	ln -fs $(dotfiles)/konsole/kiril.profile ~/.local/share/konsole/kiril.profile
+
