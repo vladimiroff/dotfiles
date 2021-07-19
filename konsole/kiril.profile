@@ -10,10 +10,11 @@ Parent=FALLBACK/
 [Interaction Options]
 CopyTextAsHTML=false
 MouseWheelZoomEnabled=false
-TrimLeadingSpacesInSelectedText=true
+TrimLeadingSpacesInSelectedText=false
 TrimTrailingSpacesInSelectedText=true
-UnderlineFilesEnabled=true
+UnderlineFilesEnabled=false
+UnderlineLinksEnabled=true
 
 [Scrolling]
 HistorySize=50000
-ScrollBarPosition=2
+ScrollBarPosition=1
