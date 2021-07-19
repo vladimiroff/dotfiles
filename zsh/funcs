@@ -20,7 +20,7 @@ function exit_code_prompt() {
   if [[ $LAST_EXIT_CODE -eq 0 ]]; then
     EXIT_CODE_PROMPT="%{$fg_bold[green]%}-->%{$reset_color%}"
   else
-    EXIT_CODE_PROMPT="%{$fg_bold[red]%}$LAST_EXIT_CODE->%{$reset_color%}"
+    EXIT_CODE_PROMPT="%{$fg_bold[red]%}:$LAST_EXIT_CODE->%{$reset_color%}"
   fi
   echo "$EXIT_CODE_PROMPT"
 }
