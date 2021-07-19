@@ -1,0 +1,10 @@
+#!/bin/sh
+if [ -z $1 ]; then
+	echo "git rebase-on <branch-name>"
+	exit 1
+fi
+
+current_branch=$(git rev-parse --abbrev-ref HEAD)
+git checkout $1
+git pull origin $1 --rebase
+git rebase $1 "$current_branch"
