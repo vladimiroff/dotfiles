@@ -1,17 +1,12 @@
 #!/bin/bash
-
 export TERM=xterm-256color
 export EDITOR=vim
 export GDK_USE_XFT=1
 export GOPATH=$HOME/go
-export HISTCONTROL=ignoreboth
 export KWIN_COMPOSE=O2ES
 export KWIN_FORCE_LANCZOS=1
 export KWIN_OPENGL_INTERFACE=egl
 export KWIN_USE_INTEL_SWAP_EVENT=1
-export LANG="en_US.UTF-8"
-export LANGUAGE="en_US"
-export LC_ALL="en_US.UTF-8"
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 export MOZ_USE_XINPUT2=1
 export PATH="$HOME/bin:$DOTFILES/bin:$GOPATH/bin:$PATH:$HOME/.cargo/bin"
@@ -22,6 +17,10 @@ export QT_QPA_PLATFORMTHEME=kde
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel -Dsun.java2d.dpiaware=false"
 
-if [[ $DESKTOP_SESSION == *"kde"* ]] || [[ $DESKTOP_SESSION == *"plasma"* ]]; then
+if [[ $DESKTOP_SESSION =~ "kde" ]] || [[ $DESKTOP_SESSION =~ "plasma" ]]; then
 	export SSH_ASKPASS=/usr/bin/ksshaskpass
+fi
+
+if [ -f "$HOME/.config/user-dirs.dirs" ]; then
+	source "$HOME/.config/user-dirs.dirs"
 fi
