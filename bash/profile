@@ -1,9 +1,4 @@
 #!/bin/bash
-
-if [ -r ~/.dir_colors ]; then
-	eval $(dircolors ~/.dir_colors)
-fi
-
-if [ -r ~/.bashrc ]; then
-	source ~/.bashrc
-fi
+test -r "$HOME/.config/user-dirs.dirs" && source "$HOME/.config/user-dirs.dirs"
+test -r "$HOME/.dir_colors"            && eval $(dircolors "$HOME/.dir_colors")
+test -r "$HOME/.bashrc"                && source "$HOME/.bashrc"
