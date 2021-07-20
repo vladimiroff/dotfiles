@@ -1,11 +1,7 @@
 #!/bin/bash
-
-if [[ -n "$TMUX" ]]; then
-    export TERM=screen-256color
-fi
-
-# sudo bash-comletion
 complete -cf sudo
 
-
-[[ -s /usr/bin/virtualenvwrapper_lazy.sh ]] && source /usr/bin/virtualenvwrapper_lazy.sh
+export PROMPT_COMMAND=_prompt
+export HISTCONTROL=ignoreboth
+export HISTFILESIZE=10000
+export HISTSIZE=10000

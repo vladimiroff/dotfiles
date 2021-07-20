@@ -1,5 +1,6 @@
 #!/bin/bash
 
-source $DOTFILES/bash/completion_scripts/django
-source $DOTFILES/bash/completion_scripts/git
+for f in $DOTFILES/bash/completion_scripts/*; do
+	source $f
+done
 
