@@ -10,6 +10,7 @@ export KWIN_USE_INTEL_SWAP_EVENT=1
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 export MOZ_USE_XINPUT2=1
 export PATH="$HOME/bin:$DOTFILES/bin:$GOPATH/bin:$PATH:$HOME/.cargo/bin"
+export MANPATH="$HOME/.local/share/man:$MANPATH"
 export PYTHONDONTWRITEBYTECODE=1
 export QT_XFT=true
 export QT_STYLE_OVERRIDE="Breeze"
