@@ -1,5 +1,4 @@
 #!/bin/bash
-
 function extract () {
   if [ -f "$1" ]; then
 case $1 in
@@ -25,24 +24,4 @@ function go-web-coverage() {
     cmd="go test -coverprofile=coverage.out -coverpkg=$1 -covermode=count $1"
     eval "$cmd" && go tool cover -html=coverage.out
     [[ -f coverage.out  ]] && unlink coverage.out
-}
-
-# Use sshaskpass if available
-ensure_ssh() {
-    /usr/bin/ssh-add < /dev/null || /usr/bin/ssh-add
-}
-
-ssh() {
-    ensure_ssh
-    /usr/bin/ssh "$@"
-}
-
-rsync() {
-    ensure_ssh
-    /usr/bin/rsync "$@"
-}
-
-scp() {
-    ensure_ssh
-    /usr/bin/scp "$@"
 }
