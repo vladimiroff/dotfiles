@@ -13,6 +13,7 @@ alias fuck='sudo $(fc -ln -1)'
 alias copy='wl-copy'
 alias upload="rsync --progress --recursive --filter=':- .gitignore' "
 alias em='emacs -nw'
+alias myip='curl -s https://zx2c4.com/ip | head -n1'
 
 # systemd
 alias poweroff='systemctl poweroff'
