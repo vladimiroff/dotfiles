@@ -8,3 +8,4 @@ current_branch=$(git rev-parse --abbrev-ref HEAD)
 git checkout $1
 git pull origin $1 --rebase
 git rebase $1 "$current_branch"
+git checkout "$current_branch"
