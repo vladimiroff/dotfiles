@@ -1,26 +1,15 @@
-ALL   := bash tmux X git mercurial vim ipython zsh systemd mutt konsole
+ALL := bash tmux git mercurial vim ipython zsh systemd mutt konsole
 
 dotfiles = `pwd`
 
 update:
 	git pull
-	git submodule sync
-	git submodule foreach "git checkout master; git pull origin master; echo"
 	$(MAKE) install
 
 env:
 	cat $(dotfiles)/sh/environment  | awk '/^export/ { gsub(/^export /, ""); print }' > ~/.config/environment.d/dotfiles.conf
 
 install: $(ALL:%=install-%) env
-
-install-X:
-	mkdir -p ~/.config/touchegg
-	ln -fs $(dotfiles)/x11/Xmodmap ~/.Xmodmap
-	ln -fs $(dotfiles)/x11/xinitrc ~/.xinitrc
-	ln -fs $(dotfiles)/x11/Xdefaults ~/.Xdefaults
-	ln -fs $(dotfiles)/x11/Xresources ~/.Xresources
-	ln -fs $(dotfiles)/x11/touchegg.conf ~/.config/touchegg/touchegg.conf
-	ln -fs $(dotfiles)/x11/libinput-gestures.conf ~/.config/libinput-gestures.conf
 
 install-bash:
 	ln -fs $(dotfiles)/sh/dir_colors ~/.dir_colors
