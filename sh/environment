@@ -16,6 +16,7 @@ export KWIN_OPENGL_INTERFACE=egl
 export KWIN_USE_INTEL_SWAP_EVENT=1
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 export MOZ_USE_XINPUT2=1
+export MOZ_ENABLE_WAYLAND=1
 export PATH="$HOME/bin:$DOTFILES/bin:$HOME/.local/bin:$GOPATH/bin:$HOME/.cargo/bin:$HOME/perl5/bin:$PATH"
 export MANPATH="$HOME/.local/share/man:$MANPATH"
 export PYTHONDONTWRITEBYTECODE=1
@@ -23,16 +24,20 @@ export QT_XFT=true
 export QT_STYLE_OVERRIDE="Breeze"
 export QT_QPA_PLATFORMTHEME=kde
 export VIRTUAL_ENV_DISABLE_PROMPT=1
-export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel -Dsun.java2d.dpiaware=false"
 export PERL5LIB="$HOME/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"
 export PERL_LOCAL_LIB_ROOT="$HOME/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"
 export PERL_MB_OPT="--install_base \"$HOME/perl5\""
 export PERL_MM_OPT="INSTALL_BASE=$HOME/perl5"
+export FZF_DEFAULT_OPTS="--reverse --border --height=50%"
+
+# This breaks touch screen controls in firefox. It is set by
+# kde-settings-plasma in order to workaround this:
+# https://bugzilla.redhat.com/show_bug.cgi?id=1226465#c20
+unset GDK_CORE_DEVICE_EVENTS
+
+[ -f "$HOME/.config/user-dirs.dirs" ] && source "$HOME/.config/user-dirs.dirs"
+[ -f "$HOME/.dir_colors" ] && eval $(dircolors "$HOME/.dir_colors")
 
 if [[ $DESKTOP_SESSION =~ "kde" ]] || [[ $DESKTOP_SESSION =~ "plasma" ]]; then
 	export SSH_ASKPASS=/usr/bin/ksshaskpass
-fi
-
-if [ -f "$HOME/.config/user-dirs.dirs" ]; then
-	source "$HOME/.config/user-dirs.dirs"
 fi
