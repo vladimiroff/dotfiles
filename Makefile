@@ -1,4 +1,4 @@
-ALL := bash tmux git mercurial vim ipython zsh systemd mutt konsole
+ALL := bash tmux git mercurial vim ipython zsh systemd konsole
 
 dotfiles = `pwd`
 
@@ -39,14 +39,6 @@ install-mercurial:
 install-systemd:
 	mkdir -p ~/.config/systemd/user/
 	cp $(dotfiles)/systemd/user/* ~/.config/systemd/user/
-	sed -i "/Environment\=/c\Environment\=\"DOTFILES\=$(dotfiles)\"" ~/.config/systemd/user/offlineimap.service
-
-install-mutt:
-	ln -fs $(dotfiles)/mail/mutt/ ~/.mutt
-	ln -fs $(dotfiles)/mail/offlineimaprc ~/.offlineimaprc
-	ln -fs $(dotfiles)/mail/msmtprc ~/.msmtprc
-	mkdir -p ~/.cache/mutt/{headers,bodies,tmp}
-	mkdir -p ~/.cache/mutt/{headers,bodies}
 
 install-konsole:
 	mkdir -p ~/.local/share/konsole/
