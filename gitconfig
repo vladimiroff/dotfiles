@@ -1,7 +1,8 @@
 [user]
-	name = Kiril Vladimiroff
-	email = kiril@vladimiroff.org
-	signingkey = E8AC87A89B24A670
+	name = Kiril Vladimirov
+	email = kiril@vladimiroff.bg
+[init]
+	defaultBranch = master
 [github]
 	user = vladimiroff
 [color]
@@ -12,7 +13,7 @@
 [branch]
 	autosetuprebase = always
 [merge]
-	tool = vimdiff
+	tool = fugitive
 [diff]
 	tool = vimdiff
 	compactionHeuristic = true
@@ -23,26 +24,40 @@
 	rebase = true
 [push]
 	default = tracking
-[rerere]
-	enabled = true
-[commit]
-	gpgsign = true
 [alias]
+	bc = !git rev-parse --abbrev-ref HEAD | wl-copy
 	b = branch
+	c = "!git checkout $(git-fzf-branch)"
 	co = checkout
-	hpush = push heroku master
 	l = log --graph --all --abbrev-commit --date=relative --date-order --date=format:'%Y-%m-%d %H:%M:%S' --pretty=format:'%C(bold red)%h%C(reset) - %C(cyan)(%ai)%C(reset) %C(bold green)%s%C(reset) %C(bold blue) - %an <%aE>%C(reset) %C(bold red)[%GK]%C(reset)%C(bold yellow)%d%C(reset)'
-	locals = log --branches --not --remotes
 	ls = ls-files
 	st = status
-	tree = log --graph --simplify-by-decoration --all --date=format:'%Y-%m-%d %H:%M:%S' --pretty=format:'%C(bold red)%d%C(reset) - %C(cyan)(%ad)%C(reset) %C(bold green)%s%C(reset) %C(bold blue) - %an <%aE>%C(reset) %C(bold red)[%GK]%C(reset)'
 	sync = !git pull && git push
-	fsync = !git stash && git pull && git push && git stash pop
+	tree = log --graph --simplify-by-decoration --all --date=format:'%Y-%m-%d %H:%M:%S' --pretty=format:'%C(bold red)%d%C(reset) - %C(cyan)(%ad)%C(reset) %C(bold green)%s%C(reset) %C(bold blue) - %an <%aE>%C(reset) %C(bold red)[%GK]%C(reset)'
 	root = rev-parse --show-toplevel
+	wip = for-each-ref --sort='authordate:iso8601' --format=' %(color:green)%(authordate:relative)%09%(color:white)%(refname:short)' refs/heads
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = 11
+	frag = magenta bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+[http]
+	cookiefile = /home/kiril/.gitcookies
+[mergetool "fugitive"]
+	cmd = vim -f -c \"Gvdiffsplit!\" \"$MERGED\"
 [url "git://anongit.kde.org/"]
 	insteadOf = kde:
 [url "ssh://git@git.kde.org/"]
 	pushInsteadOf = kde:
 [url "git@git.kde.org:"]
 	pushInsteadOf = kde:
+[url "git@gitlab.com:"]
+	insteadOf = https://gitlab.com/
 # vim: set filetype=.gitconfig:
