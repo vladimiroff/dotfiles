@@ -1,0 +1,5 @@
+#!/bin/zsh
+
+export SHELL_NAME='zsh'
+export DOTFILES="$HOME/dotfiles"
+source ${DOTFILES}/sh/rc

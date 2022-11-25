@@ -2,19 +2,6 @@
 
 source $DOTFILES/sh/funcs
 
-function virtualenv_prompt_info() {
-    if [ -n "$VIRTUAL_ENV" ]; then
-        if [ -f "$VIRTUAL_ENV/__name__" ]; then
-            local name=`cat $VIRTUAL_ENV/__name__`
-        elif [ `basename $VIRTUAL_ENV` = "__" ]; then
-            local name=$(basename $(dirname $VIRTUAL_ENV))
-        else
-            local name=$(basename $VIRTUAL_ENV)
-        fi
-        echo "($name)"
-    fi
-}
-
 function exit_code_prompt() {
   local LAST_EXIT_CODE=$?
   if [[ $LAST_EXIT_CODE -eq 0 ]]; then

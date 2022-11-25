@@ -41,7 +41,8 @@ install-ipython:
 	ln -fs $(dotfiles)/ipython/profile_default/ipython_config.py ~/.ipython/profile_default/ipython_config.py
 
 install-zsh:
-	ln -fs $(dotfiles)/sh/rc ~/.zshrc
+	ln -fs $(dotfiles)/zsh/rc ~/.zshrc
+	ln -fs $(dotfiles)/sh/environment ~/.zshenv
 
 install-mercurial:
 	ln -fs $(dotfiles)/hgrc ~/.hgrc
@@ -63,3 +64,5 @@ install-konsole:
 	ln -fs $(dotfiles)/konsole/nord.colorscheme ~/.local/share/konsole/nord.colorscheme
 	ln -fs $(dotfiles)/konsole/kiril.profile ~/.local/share/konsole/kiril.profile
 
+install-starship:
+	ln -fs $(dotfiles)/starship.toml ~/.config/starship.toml
