@@ -15,13 +15,6 @@ alias upload="rsync --progress --recursive --filter=':- .gitignore' "
 alias em='emacs -nw'
 alias myip='curl -s https://zx2c4.com/ip | head -n1'
 
-# systemd
-alias poweroff='systemctl poweroff'
-alias reboot='systemctl reboot'
-alias suspend='systemctl suspend'
-alias hibernate='systemctl hibernate'
-alias suspend-hybrid='systemctl suspend-hybrid'
-
 # tmux
 alias tmux='tmux -u -2'
 alias ta='tmux attach'
