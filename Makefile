@@ -8,7 +8,10 @@ update:
 	git submodule foreach "git checkout master; git pull origin master; echo"
 	$(MAKE) install
 
-install: $(ALL:%=install-%)
+env:
+	cat $(dotfiles)/sh/environment  | awk '/^export/ { gsub(/^export /, ""); print }' > ~/.config/environment.d/dotfiles.conf
+
+install: $(ALL:%=install-%) env
 
 install-X:
 	mkdir -p ~/.config/touchegg
