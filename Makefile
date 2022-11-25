@@ -34,7 +34,7 @@ install-zsh:
 	ln -fs $(dotfiles)/sh/environment ~/.zshenv
 
 install-mercurial:
-	ln -fs $(dotfiles)/hgrc ~/.hgrc
+	ln -fs $(dotfiles)/hg/rc ~/.hgrc
 
 install-systemd:
 	mkdir -p ~/.config/systemd/user/
