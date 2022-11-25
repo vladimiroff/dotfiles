@@ -1,6 +1,3 @@
 #!/bin/bash
 
-for f in $DOTFILES/bash/completion_scripts/*; do
-	source $f
-done
-
+complete -cf sudo

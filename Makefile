@@ -23,7 +23,8 @@ install-X:
 	ln -fs $(dotfiles)/x11/libinput-gestures.conf ~/.config/libinput-gestures.conf
 
 install-bash:
-	ln -fs $(dotfiles)/sh/rc ~/.bashrc
+	ln -fs $(dotfiles)/sh/dir_colors ~/.dir_colors
+	ln -fs $(dotfiles)/bash/rc ~/.bashrc
 	ln -fs $(dotfiles)/bash/profile ~/.bash_profile
 
 install-tmux:

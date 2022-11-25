@@ -1,5 +1,8 @@
 #!/bin/bash
-complete -cf sudo
+# shellcheck disable=1090,2009
+# shellcheck source=/dev/null
+
+source "${DOTFILES}/sh/environment"
 
 export PROMPT_COMMAND=_prompt
 export HISTCONTROL=ignoreboth

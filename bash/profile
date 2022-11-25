@@ -1,4 +1,5 @@
 #!/bin/bash
-test -r "$HOME/.config/user-dirs.dirs" && source "$HOME/.config/user-dirs.dirs"
-test -r "$HOME/.dir_colors"            && eval $(dircolors "$HOME/.dir_colors")
-test -r "$HOME/.bashrc"                && source "$HOME/.bashrc"
+# shellcheck source=/dev/null
+
+test -r "$HOME/.bashrc" && source "$HOME/.bashrc"
+alias reset_prompt="unset PROMPT_COMMAND && export PS1='--> '"
