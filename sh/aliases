@@ -10,7 +10,7 @@ alias grep="grep --exclude-dir=.git --exclude=.tags --exclude-dir=.coverage\
  --exclude-dir=.git --exclude=.tags --exclude-dir=.coverage --exclude-dir=.hg\
  --exclude-dir=.ropeproject --exclude=tags"
 alias fuck='sudo $(fc -ln -1)'
-alias copy='wl-copy'
+alias copy='wl-copy -n'
 alias upload="rsync --progress --recursive --filter=':- .gitignore' "
 alias em='emacs -nw'
 alias myip='curl -s https://zx2c4.com/ip | head -n1'
