@@ -1,4 +1,4 @@
-ALL := bash tmux git mercurial vim ipython zsh systemd konsole
+ALL := bash tmux git mercurial vim ipython zsh systemd konsole starship bat
 
 dotfiles = `pwd`
 
@@ -47,3 +47,6 @@ install-konsole:
 
 install-starship:
 	ln -fs $(dotfiles)/starship.toml ~/.config/starship.toml
+
+install-bat:
+	ln -sf $(dotfiles)/bat ~/.config/bat
