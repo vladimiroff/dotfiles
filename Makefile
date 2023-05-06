@@ -1,4 +1,4 @@
-ALL := bash tmux git mercurial vim ipython zsh systemd konsole starship bat
+ALL := bash tmux git mercurial vim ipython zsh systemd konsole starship bat sqlite
 
 dotfiles = `pwd`
 
@@ -50,3 +50,6 @@ install-starship:
 
 install-bat:
 	ln -sf $(dotfiles)/bat ~/.config/bat
+
+install-sqlite:
+	ln -sf $(dotfiles)/sqliterc ~/.sqliterc
