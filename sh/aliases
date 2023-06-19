@@ -32,6 +32,8 @@ alias mutt='command -v deactivate >/dev/null 2>&1 && deactivate; mutt'
 # Activate Python env
 alias activate='source env/bin/activate'
 
+# Go
+alias go-cover='go test -coverpkg=./... -coverprofile=/tmp/cover.profile ./... && go tool cover -html=/tmp/cover.profile && rm /tmp/cover.profile'
 
 # Red-Green test runners
 alias go-test='autocompile.py . .go "red-green go test ./..."'
