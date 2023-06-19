@@ -32,8 +32,6 @@ alias mutt='command -v deactivate >/dev/null 2>&1 && deactivate; mutt'
 # Activate Python env
 alias activate='source env/bin/activate'
 
-# Ruby
-alias be='bundle exec'
 
 # Red-Green test runners
 alias go-test='autocompile.py . .go "red-green go test ./..."'
