@@ -25,12 +25,13 @@
 [push]
 	default = tracking
 [alias]
+	c = "!git checkout $(git fzf-branch)"
 	amend = commit --amend
 	bc = !git rev-parse --abbrev-ref HEAD | wl-copy
 	b = branch
-	c = "!git checkout $(git-fzf-branch)"
 	co = checkout
 	l = log --graph --all --abbrev-commit --date=relative --date-order --date=format:'%Y-%m-%d %H:%M:%S' --pretty=format:'%C(bold red)%h%C(reset) - %C(cyan)(%ai)%C(reset) %C(bold green)%s%C(reset) %C(bold blue) - %an <%aE>%C(reset) %C(bold red)[%GK]%C(reset)%C(bold yellow)%d%C(reset)'
+	ll = log --graph --all --oneline --decorate
 	ls = ls-files
 	st = status
 	sync = !git pull && git push
