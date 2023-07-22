@@ -1,2 +1,2 @@
---theme="Solarized (light)"
+--theme="Nord"
 --pager="less --RAW-CONTROL-CHARS --quit-if-one-screen --mouse"
