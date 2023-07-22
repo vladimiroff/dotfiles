@@ -7,6 +7,7 @@ update:
 	$(MAKE) install
 
 env:
+	mkdir -p ~/.config/environment.d
 	cat $(dotfiles)/sh/environment  | awk '/^export/ { gsub(/^export /, ""); print }' > ~/.config/environment.d/dotfiles.conf
 
 install: $(ALL:%=install-%) env
