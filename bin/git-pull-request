@@ -1,11 +1,16 @@
 #!/bin/sh
 current_branch=$(git rev-parse --abbrev-ref HEAD)
-git push -v --set-upstream origin "$current_branch" $2 2>&1 | while IFS= read -r line
+default_branch=$(git rev-parse --abbrev-ref origin/HEAD | cut -d/ -f2)
+if [ "$current_branch" = "$default_branch" ]; then
+	echo "Can not open a pull-request against HEAD branch"
+	exit 1
+fi
+
+git push -v --set-upstream origin "$current_branch" 2>&1 | while IFS= read -r line
 do
 	echo "$line"
 	url=$(echo "$line" | grep "remote:" | grep -Eo '(http|https)://[^ ]+')
-	if [ -n "$url" ]
-	then
+	if [ -n "$url" ]; then
 		xdg-open "$url" > /dev/null
 	fi
 done
