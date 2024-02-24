@@ -10,6 +10,7 @@ export TERM=xterm-256color
 export EDITOR=vim
 export GDK_USE_XFT=1
 export GOPATH=$HOME/go
+export GTK_USE_PORTAL=1
 export KWIN_COMPOSE=O2ES
 export KWIN_FORCE_LANCZOS=1
 export KWIN_OPENGL_INTERFACE=egl
