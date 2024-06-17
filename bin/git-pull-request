@@ -10,7 +10,10 @@ git push -v --set-upstream origin "$current_branch" 2>&1 | while IFS= read -r li
 do
 	echo "$line"
 	url=$(echo "$line" | grep "remote:" | grep -Eo '(http|https)://[^ ]+')
-	if [ -n "$url" ]; then
-		xdg-open "$url" > /dev/null
+	[ -n "$url" ] || continue
+
+	if command -v pull_request_url >/dev/null; then
+		url=$(pull_request_url "$url" "$current_branch")
 	fi
+	xdg-open "${url}" > /dev/null
 done
