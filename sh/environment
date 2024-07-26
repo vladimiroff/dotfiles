@@ -31,6 +31,12 @@ export PERL_MB_OPT="--install_base \"$HOME/perl5\""
 export PERL_MM_OPT="INSTALL_BASE=$HOME/perl5"
 export FZF_DEFAULT_OPTS="--reverse --border --height=50%"
 
+# Because various go tools are simply trying out a bunch of web browsers,
+# instead of using xdg-open.
+# TODO: Automatically set this based on the Exec= line in the desktop file
+# returned by `xdg-settings get default-web-browse`.
+export BROWSER="brave-browser"
+
 # This breaks touch screen controls in firefox. It is set by
 # kde-settings-plasma in order to workaround this:
 # https://bugzilla.redhat.com/show_bug.cgi?id=1226465#c20
