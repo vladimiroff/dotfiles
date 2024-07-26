@@ -25,6 +25,8 @@ zle -N edit-command-line
 bindkey '^[[3~' delete-char
 bindkey '^Xe'   edit-command-line
 
-if type "starship" > /dev/null; then
+if ps $PPID | grep mc; then
+	RPROMPT=""
+elif type "starship" > /dev/null; then
 	eval "$(starship init zsh)"
 fi

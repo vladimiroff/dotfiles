@@ -40,3 +40,6 @@ alias go-test='autocompile.py . .go "red-green go test ./..."'
 alias django-test='autocompile.py . .py "red-green python manage.py test"'
 
 alias qrcode='qrencode -o - -t utf8'
+
+# cd into last navigated directory from inside mc on exit
+alias mc='. /usr/libexec/mc/mc-wrapper.sh'
