@@ -1,6 +1,6 @@
 [Appearance]
 ColorScheme=nord
-Font=Fira Code Retina,10,-1,5,53,0,0,0,0,0,Regular
+Font=CaskaydiaCove Nerd Font Light,10,-1,5,25,0,0,0,0,0,Regular
 UseFontLineChararacters=true
 
 [General]
@@ -13,9 +13,13 @@ CopyTextAsHTML=false
 MouseWheelZoomEnabled=false
 TrimLeadingSpacesInSelectedText=false
 TrimTrailingSpacesInSelectedText=true
-UnderlineFilesEnabled=false
+UnderlineFilesEnabled=true
 UnderlineLinksEnabled=true
 
 [Scrolling]
-HistorySize=50000
+HistorySize=500000
 ScrollBarPosition=1
+
+[Terminal Features]
+ReverseUrlHints=true
+UrlHintsModifiers=201326592
