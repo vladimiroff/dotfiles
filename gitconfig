@@ -1,6 +1,6 @@
 [user]
 	name = Kiril Vladimirov
-	email = kiril@vladimiroff.bg
+	email = kiril@vld.bg
 [init]
 	defaultBranch = master
 [github]
@@ -10,6 +10,8 @@
 [core]
 	editor = vim
 	whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+[commit]
+	verbose = true
 [branch]
 	autosetuprebase = always
 [merge]
