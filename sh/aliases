@@ -14,6 +14,7 @@ alias copy='wl-copy -n'
 alias upload="rsync --progress --recursive --filter=':- .gitignore' "
 alias em='emacs -nw'
 alias myip='curl -s https://zx2c4.com/ip | head -n1'
+alias ts='tailscale'
 
 # tmux
 alias tmux='tmux -u -2'
